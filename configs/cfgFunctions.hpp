@@ -5,7 +5,6 @@ class CfgFunctions
     {
         class oec
         {
-            class test {};
             class getParams {};
             class getParam {};
             class testMarker {};
@@ -24,6 +23,7 @@ class CfgFunctions
             class deleteMarkersByColor {};
             class enableAI {};
             class getPositionInMarkers {};
+            class getPositionAroundMarker {};
             class randomPosTrigger {};
         };
     };

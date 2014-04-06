@@ -9,6 +9,7 @@
   Global variables:
     assaultArea
     assaultUnits
+    outpostArea
     outpostDistance
 
   Example:
@@ -18,10 +19,17 @@
     ---
 */
 
-// Find place for assault around outpost in defined distance.
+// Get Exclude areas.
+_excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
-for "_i" from 0 to 50 do {
-    _pos = [[[getMarkerPos "Outpost 2", 100]]] call BIS_fnc_randomPos;
-    [_pos, "ColorBlack"] call oec_fnc_testMarker;
+// Try to find some point for make teleport places.
+_position = [outpostArea, 50, _excludeMarkers] call lc_fnc_getPositionAroundMarker;
+
+
+for "_i" from 0 to 99 do {
+    _position = [outpostArea, 50, _excludeMarkers] call lc_fnc_getPositionAroundMarker;
+    [_position, "ColorBlack"] call oec_fnc_testMarker;
 };
 
+// Find places for all outpost units.
+// _outpostPlaces = selectBestPlaces [_position, 25, "meadow+trees", 5, count outpostUnits];

@@ -26,10 +26,10 @@ _outpostMarkers = [OUTPOST_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 // Select one.
 outpostArea = _outpostMarkers call BIS_fnc_selectRandom;
 
-
-// Try to find some point for make teleport places.
+// Get Exclude areas.
 _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
+// Try to find some point for make teleport places.
 _position = [[outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
 
 
@@ -41,5 +41,5 @@ _outpostPlaces = selectBestPlaces [_position, 25, "meadow+trees", 5, count outpo
 // TODO: Teleport by groups.
 // TODO: Rotate all units in each group to leader formation.
 {
-  _x setPos ((_outpostPlaces call BIS_fnc_arrayPop) select 0);
+    _x setPos ((_outpostPlaces call BIS_fnc_arrayPop) select 0);
 } forEach outpostUnits;
