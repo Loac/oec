@@ -171,12 +171,12 @@ class Mission
 	};
 	class Markers
 	{
-		items=5;
+		items=4;
 		class Item0
 		{
 			position[]={4092.5513,221.16876,4591.9492};
 			name="Outpost 2";
-			markerType="RECTANGLE";
+			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorOrange";
 			a=20;
@@ -195,13 +195,14 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={4106.8027,221.2997,4603.8545};
+			position[]={4126.2847,214.18239,4631.3804};
 			name="Exclude 2";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			a=20;
-			b=20;
+			a=50;
+			b=100;
+			angle=-223.43895;
 		};
 		class Item3
 		{
@@ -213,15 +214,6 @@ class Mission
 			a=40;
 			b=20;
 			angle=34.9398;
-		};
-		class Item4
-		{
-			position[]={4216.7725,172.18538,4730.4248};
-			name="zzz";
-			markerType="RECTANGLE";
-			type="Empty";
-			a=20;
-			b=40;
 		};
 	};
 };
