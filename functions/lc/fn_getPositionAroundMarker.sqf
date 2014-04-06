@@ -9,7 +9,8 @@
     0: string - marker.
     1: integer - distance.
     2: array - markers with excludes areas.
-    3: integer (optional) - max try.
+    3: boolean - safe position.
+    4: integer (optional) - max try.
 
   Example:
     [["Outpost 1"], 50, ["Exclude 1", "Exclude 2"]] call lc_fnc_getPositionAroundMarker;
@@ -19,7 +20,7 @@
 */
 
 private [
-    "_marker", "_distance", "_excludeMarkers", "_maxTry",
+    "_marker", "_distance", "_excludeMarkers", "_safe", "_maxTry",
     "_mPosX", "_mPosY",
     "_mSizeX", "_mSizeY",
     "_mDir",
@@ -37,8 +38,11 @@ _distance = _this select 1;
 // Exclude areas.
 _excludeMarkers = [_this, 2, []] call BIS_fnc_param;
 
+// Check for safe position..
+_safe = [_this, 3, true] call BIS_fnc_param;
+
 // Max try for finding position.
-_maxTry = [_this, 3, 50] call BIS_fnc_param;
+_maxTry = [_this, 4, 50] call BIS_fnc_param;
 
 // Valid position. Result of function.
 _position = [0, 0];
@@ -99,6 +103,11 @@ for "_i" from 0 to _maxTry -1 do {
             _positionCandidate = [];
         };
     } forEach _excludeMarkers;
+
+    // If need chek safe position.
+    if (_safe and count _positionCandidate > 0) then {
+        _positionCandidate = _positionCandidate isFlatEmpty [];
+    };
 
     // If candidate is valid.
     if (count _positionCandidate > 0) exitWith {

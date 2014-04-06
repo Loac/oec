@@ -21,6 +21,7 @@
 private [
     "_areaMarkers",
     "_excludeMarkers",
+    "_safe",
     "_maxTry",
     "_position",
     "_positionCandidate",
@@ -33,8 +34,11 @@ _areaMarkers = _this select 0;
 // Exclude areas.
 _excludeMarkers = _this select 1;
 
+// Check for safe position..
+_safe = [_this, 2, true] call BIS_fnc_param;
+
 // Max try for finding position.
-_maxTry = [_this, 2, 50] call BIS_fnc_param;
+_maxTry = [_this, 3, 50] call BIS_fnc_param;
 
 // Valid position. Result of function.
 _position = [0, 0];
@@ -53,6 +57,11 @@ for "_i" from 0 to _maxTry -1 do {
             _positionCandidate = [];
         };
     } forEach _excludeMarkers;
+
+    // If need chek safe position.
+    if (_safe and count _positionCandidate > 0) then {
+        _positionCandidate = _positionCandidate isFlatEmpty [];
+    };
 
     // If candidate is valid.
     if (count _positionCandidate > 0) exitWith {
