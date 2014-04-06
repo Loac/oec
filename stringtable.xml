@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Operation Emerald City">
+    <Package name="Main">
+        <Key ID="STR_OEC_please_stand_by">
+            <Original>Please, stand by.</Original>
+            <Russian>Пожалуйста, подождите.</Russian>
+        </Key>
+    </Package>
+    <Package name="Params">
+        <Key ID="STR_OEC_param_outpostDistance">
+            <Original>Outpost distance</Original>
+            <Russian>Расстояние до заставы</Russian>
+        </Key>
+    </Package>
+</Project>

@@ -1,0 +1,9 @@
+enableDebugConsole = 2;
+allowFunctionsLog = 1;
+
+onLoadName = "Op: Emerald City";
+onLoadMission = "Good luck";
+author = "Loac";
+
+#include "configs\cfgParams.hpp"
+#include "configs\cfgFunctions.hpp"
