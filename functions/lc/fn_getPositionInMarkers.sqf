@@ -4,6 +4,7 @@
 
   Description:
     Get random position in some markers with excludes.
+    For work need fixed version BIS function lc_fnc_randomPosTrigger.
 
   Parameters:
     0: array - markers for finding position.
@@ -21,12 +22,9 @@ private [
     "_areaMarkers",
     "_excludeMarkers",
     "_maxTry",
-    "_excludes",
     "_position",
     "_positionCandidate",
-    "_trigger",
-    "_area",
-    "_valid"
+    "_area"
 ];
 
 // Areas for finding position
@@ -38,42 +36,28 @@ _excludeMarkers = _this select 1;
 // Max try for finding position.
 _maxTry = [_this, 2, 50] call BIS_fnc_param;
 
-// Triggers array with excludes areas.
-_excludes = [];
-
 // Valid position. Result of function.
 _position = [0, 0];
-
-// Make triggers for work with BIS functions.
-{
-    _trigger = [objNull, _x] call BIS_fnc_triggerToMarker;
-    _excludes = _excludes + [_trigger];
-
-} forEach _excludeMarkers;
 
 // Find valid position.
 for "_i" from 0 to _maxTry -1 do {
     // Select random area (marker).
     _area = _areaMarkers call BIS_fnc_selectRandom;
 
-    // Make trigger from marker.
-    _area = [objNull, _area] call BIS_fnc_triggerToMarker;
-
     // Get some point in area.
-    _positionCandidate = _area call BIS_fnc_randomPosTrigger;
+    _positionCandidate = [_area] call lc_fnc_randomPosTrigger;
 
     // Check for excludes.
     {
         if ([_x, _positionCandidate] call BIS_fnc_inTrigger) exitWith {
             _positionCandidate = [];
         };
-    } forEach _excludes;
+    } forEach _excludeMarkers;
 
+    // If candidate is valid.
     if (count _positionCandidate > 0) exitWith {
       _position = _positionCandidate;
     };
-
-    hint format["%1", _i];
 };
 
 // Return.
