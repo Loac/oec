@@ -52,6 +52,9 @@
 // Disable AI.
 _handle = [false] call lc_fnc_enableAI;
 
+// Load params.
+_handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
+
 // Init sides.
 _handle = [] execVM "init\init_units.sqf"; waitUntil { scriptDone _handle };
 
@@ -62,18 +65,6 @@ _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 _handle = [] execVM "init\init_assault.sqf";
 
 
-// {
-//   [_x select 0, "ColorBlack"] call oec_fnc_testMarker;
-// } forEach guardPlaces;
-
-
-// Загрузить параметры.
-_handle = [] call oec_fnc_getParams;
-_handle = [] call lc_fnc_params;
-
-
-
-["firstParam"] call oec_fnc_getParam;
 
 sleep 2;
 

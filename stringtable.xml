@@ -11,5 +11,9 @@
             <Original>Outpost distance</Original>
             <Russian>Расстояние до заставы</Russian>
         </Key>
+        <Key ID="STR_OEC_param_aiEnable">
+            <Original>Enable AI</Original>
+            <Russian>Включить ботов</Russian>
+        </Key>
     </Package>
 </Project>

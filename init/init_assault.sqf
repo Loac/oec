@@ -23,13 +23,12 @@
 _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
 // Try to find some point for make teleport places.
-_position = [outpostArea, 50, _excludeMarkers] call lc_fnc_getPositionAroundMarker;
+assaultArea = [outpostArea, 50, _excludeMarkers] call lc_fnc_getPositionAroundMarker;
 
+// Find places for all assault units.
+_assaultPlaces = selectBestPlaces [assaultArea, 25, "meadow+trees", 5, count assaultUnits];
 
-for "_i" from 0 to 99 do {
-    _position = [outpostArea, 50, _excludeMarkers] call lc_fnc_getPositionAroundMarker;
-    [_position, "ColorBlack"] call oec_fnc_testMarker;
-};
-
-// Find places for all outpost units.
-// _outpostPlaces = selectBestPlaces [_position, 25, "meadow+trees", 5, count outpostUnits];
+// Teleport units.
+{
+    _x setPos ((_assaultPlaces call BIS_fnc_arrayPop) select 0);
+} forEach assaultUnits;

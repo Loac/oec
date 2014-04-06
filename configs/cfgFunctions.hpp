@@ -5,7 +5,6 @@ class CfgFunctions
     {
         class oec
         {
-            class testMarker {};
         };
     };
 
@@ -15,8 +14,8 @@ class CfgFunctions
         {
             class broadcast {};
             class fade {};
-            class params {};
             class addMarker {};
+            class testMarker {};
             class getMarkersByColor {};
             class deleteMarkersByColor {};
             class enableAI {};

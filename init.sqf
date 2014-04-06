@@ -6,7 +6,13 @@
     Main initialization.
 
   Global variables:
-    ---
+    serverState
+    outpost
+    assault
+    outpostUnits
+    assaultUnits
+    outpostArea
+    assaultArea
 */
 
 // Define const.
@@ -21,9 +27,6 @@ EXCLUDE_MARKER_COLOR = "ColorRed";
 
 // Server state.
 serverState = STATE_UNKNOWN;
-
-// Client state.
-clientState = STATE_UNKNOWN;
 
 // Role of sides.
 // TODO: It must be selectable.
@@ -44,10 +47,6 @@ outpostArea = [];
 
 // Start position of assault.
 assaultArea = [];
-
-// Param.
-aiEnable = 1;
-
 
 // Initializations.
 
