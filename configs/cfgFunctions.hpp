@@ -5,8 +5,6 @@ class CfgFunctions
     {
         class oec
         {
-            class getParams {};
-            class getParam {};
             class testMarker {};
         };
     };
