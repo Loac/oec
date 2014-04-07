@@ -18,6 +18,7 @@ class CfgFunctions
             class testMarker {};
             class getMarkersByColor {};
             class deleteMarkersByColor {};
+            class hideMarkersByColor {};
             class enableAI {};
             class getPositionInMarkers {};
             class getPositionAroundMarker {};
