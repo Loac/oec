@@ -44,7 +44,7 @@ player enableSimulation false;
 // Emulate addPublicVariableEventHandler for single player.
 [] spawn {
     // Wait server.
-    waitUntil { startMission and time > 3 };
+    waitUntil { startMission };
 
     // Unparalyze player.
     player enableSimulation true;

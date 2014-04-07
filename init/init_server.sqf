@@ -49,11 +49,11 @@
     Включить картинку.
 */
 
-// Load params.
-_handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
-
 // Strange pause for MP.
 waitUntil { time > 0 };
+
+// Load params.
+_handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
 
 // Init sides.
 _handle = [] execVM "init\init_units.sqf"; waitUntil { scriptDone _handle };
