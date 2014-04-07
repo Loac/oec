@@ -6,21 +6,19 @@
         Delete markers by color.
 
     Parameters:
-        0: string - color of marker.
+        0: array - colors of marker.
 
     Example:
-        ["ColorOrange"] call lc_fnc_deleteMarkersByColor;
+        ["ColorOrange", "ColorRed"] call lc_fnc_deleteMarkersByColor;
 
     See:
         https://community.bistudio.com/wiki/setMarkerColor
 */
 
-private [
-    "_color"
-];
-
 {
-    deleteMarker _x;
-} forEach ( _this call lc_fnc_getMarkersByColor );
+    {
+        deleteMarker _x;
+    } forEach ( [_x] call lc_fnc_getMarkersByColor );
+} forEach _this;
 
 true;
