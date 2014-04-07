@@ -62,4 +62,5 @@ if (not isDedicated) then {
         Client side procedures.
     */
     [] execVM "init\init_client.sqf";
+
 };

@@ -20,15 +20,24 @@
 */
 waitUntil { not isNull Player and isPlayer Player };
 
+// Disable saving.
+enableSaving [false, false];
+
+// Radio off.
+enableRadio false;
+
+// Paralyze player.
+player enableSimulation false;
+
 // Blind player on prepare mission.
-// ["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
+["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
 
 "serverState" addPublicVariableEventHandler {
-  hint format [
-    "%1 has been updated to: %2",
-    _this select 0,
-    _this select 1
-  ]
+    hint format [
+        "%1 has been updated to: %2",
+        _this select 0,
+        _this select 1
+    ]
 };
 
 // Emulate addPublicVariableEventHandler for single player.
@@ -37,22 +46,28 @@ _done = false;
 waitUntil {
 
     switch (serverState) do {
-      case STATE_INIT: {
-        // Телепорт.
-        // Установка погоды.
+        // Server ready.
+        case STATE_INIT: {
+            // Cure player.
+            player enableSimulation true;
 
-        // Disable AI.
-        _handle = [false] call lc_fnc_enableAI;
+            // Disable AI.
+            [false] call lc_fnc_enableAI;
 
-        // Enable tags.
-        _handle = [] execVM "init\init_client_tags.sqf";
+            // Enable tags.
+            [] execVM "init\init_client_tags.sqf";
 
-        STATE_INIT = -1;
+            // Init complete, now player can see and move.
+            ["in", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
 
-        // Remove setting markers.
-//        _handle = [OUTPOST_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
-//        _handle = [EXCLUDE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
-      };
+            // Remove setting markers.
+            [OUTPOST_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
+            [EXCLUDE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
+
+
+            // It case must be once entire.
+            STATE_INIT = -1;
+        };
     };
 
   _done;

@@ -62,12 +62,9 @@ _handle = [] execVM "init\init_units.sqf"; waitUntil { scriptDone _handle };
 _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 
 // Assault initialization procedures.
-_handle = [] execVM "init\init_assault.sqf";
+_handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 
+sleep 1;
 
-
-sleep 2;
-
-serverState = STATE_INIT;
-
-// [["serverStatus", "Params loaded."]] call lc_fnc_broadcast;
+// Server complete initialization state. Publish state.
+_handle = [["serverState", STATE_INIT]] call lc_fnc_broadcast;
