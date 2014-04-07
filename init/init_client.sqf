@@ -26,8 +26,14 @@ enableSaving [false, false];
 // Radio off.
 enableRadio false;
 
+// God mod for possible freeze time.
+player allowDamage false;
+
 // Paralyze player.
 player enableSimulation false;
+
+// Hide setting markers.
+[OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR] call lc_fnc_hideMarkersByColor;
 
 // Disable AI.
 [false] call lc_fnc_enableAI;
@@ -38,7 +44,7 @@ player enableSimulation false;
 // Emulate addPublicVariableEventHandler for single player.
 [] spawn {
     // Wait server.
-    waitUntil { startMission };
+    waitUntil { startMission and time > 3 };
 
     // Unparalyze player.
     player enableSimulation true;

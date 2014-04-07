@@ -49,14 +49,11 @@
     Включить картинку.
 */
 
-// Disable AI.
-_handle = [false] call lc_fnc_enableAI;
-
 // Load params.
 _handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
 
 // Strange pause for MP.
-waitUntil { time > 1 };
+waitUntil { time > 0 };
 
 // Init sides.
 _handle = [] execVM "init\init_units.sqf"; waitUntil { scriptDone _handle };
@@ -66,6 +63,9 @@ _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 
 // Assault initialization procedures.
 _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
+
+// Disable AI.
+[false] call lc_fnc_enableAI;
 
 // Server complete initialization state.
 [["startMission", true]] call lc_fnc_broadcast;
