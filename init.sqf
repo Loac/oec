@@ -15,18 +15,16 @@
     assaultArea
 */
 
-// Define const.
-STATE_UNKNOWN = -1;
-STATE_INIT = 0;
-STATE_PROGRESS = 1;
+/*
+    Global variables.
+*/
 
+// Define const.
 OUTPOST_MARKER_COLOR = "ColorOrange";
 EXCLUDE_MARKER_COLOR = "ColorRed";
 
-// Global variables.
-
-// Server state.
-serverState = STATE_UNKNOWN;
+// Flag mission start.
+startMission = false;
 
 // Role of sides.
 // TODO: It must be selectable.
@@ -48,13 +46,19 @@ outpostArea = [];
 // Start position of assault.
 assaultArea = [];
 
-// Initializations.
+// Temp.
+outpostPosition = [];
+assaultPosition = [];
 
+
+/*
+    Server Initializations.
+*/
 if (isServer) then {
     /*
         Server initialization.
     */
-    [] execVM "init\init_server.sqf";
+    _handle = [] execVM "init\init_server.sqf";
 };
 
 if (not isDedicated) then {
@@ -64,3 +68,9 @@ if (not isDedicated) then {
     [] execVM "init\init_client.sqf";
 
 };
+
+// x = [] spawn
+// {
+//   (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "Outpost 1"];
+//   ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
+// };
