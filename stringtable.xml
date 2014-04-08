@@ -5,11 +5,19 @@
             <Original>Please, stand by.</Original>
             <Russian>Пожалуйста, подождите.</Russian>
         </Key>
+        <Key ID="STR_OEC_please_wait_start_mission">
+            <Original>Please, wait to start mission.</Original>
+            <Russian>Пожалуйста, дождитесь начала миссии.</Russian>
+        </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_OEC_param_outpostDistance">
             <Original>Outpost distance</Original>
             <Russian>Расстояние до заставы</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_freezeTime">
+            <Original>Freeze time</Original>
+            <Russian>Время на подготовку</Russian>
         </Key>
         <Key ID="STR_OEC_param_aiEnable">
             <Original>Enable AI</Original>

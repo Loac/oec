@@ -58,6 +58,12 @@ player enableSimulation false;
     // Enable tags.
     [] execVM "init\init_client_tags.sqf";
 
+    // Enable freeze timer.
+    [] execVM "init\init_client_freeze.sqf";
+
+    // Add radio commands.
+    [] execVM "init\init_client_radio.sqf";
+
     // Init complete, now player can see and move.
     ["in"] call lc_fnc_fade;
 };

@@ -7,3 +7,4 @@ author = "Loac";
 
 #include "configs\cfgParams.hpp"
 #include "configs\cfgFunctions.hpp"
+#include "configs\cfgRscTitles.hpp"

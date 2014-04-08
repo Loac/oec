@@ -23,6 +23,7 @@ class CfgFunctions
             class getPositionInMarkers {};
             class getPositionAroundMarker {};
             class randomPosTrigger {};
+            class timeToTimer {};
         };
     };
 };
