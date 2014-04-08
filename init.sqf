@@ -26,6 +26,7 @@
 // Define const.
 OUTPOST_MARKER_COLOR = "ColorOrange";
 EXCLUDE_MARKER_COLOR = "ColorRed";
+DISABLE_MARKER_COLOR = "ColorBlack";
 
 // Flag to mission start.
 startMission = false;

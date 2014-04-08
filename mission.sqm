@@ -28,8 +28,8 @@ class Mission
 		year=2035;
 		month=7;
 		day=6;
-		hour=14;
-		minute=0;
+		hour=10;
+		minute=45;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
@@ -44,7 +44,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1814.9141,5.5,5903.1221};
+					position[]={2673.4219,15.266874,1235.6016};
 					id=0;
 					side="EAST";
 					vehicle="O_Soldier_SL_F";
@@ -55,7 +55,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1819.9141,5.5,5898.1221};
+					position[]={2678.4219,14.423496,1230.6016};
 					id=1;
 					side="EAST";
 					vehicle="O_soldier_TL_F";
@@ -64,7 +64,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1809.9141,5.5,5898.1221};
+					position[]={2668.4219,14.068554,1230.6016};
 					id=2;
 					side="EAST";
 					vehicle="O_soldier_AR_F";
@@ -81,7 +81,7 @@ class Mission
 				items=5;
 				class Item0
 				{
-					position[]={1789.6145,5.5,5984.5396};
+					position[]={2648.1226,40.287182,1317.019};
 					id=3;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
@@ -91,7 +91,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1794.6145,5.5,5979.5396};
+					position[]={2653.1226,37.465832,1312.019};
 					id=4;
 					side="WEST";
 					vehicle="B_soldier_TL_F";
@@ -100,7 +100,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1784.6145,5.5,5979.5396};
+					position[]={2643.1226,37.291004,1312.019};
 					id=5;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
@@ -109,7 +109,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={1799.6146,5.5,5974.5396};
+					position[]={2658.1226,34.902584,1307.019};
 					id=6;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
@@ -117,7 +117,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={1779.6145,5.5,5974.5396};
+					position[]={2638.1226,37.162388,1307.019};
 					id=7;
 					side="WEST";
 					vehicle="B_soldier_AAR_F";
@@ -133,7 +133,7 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={1790.4094,5.5,5968.9253};
+					position[]={2648.9175,30.518524,1301.4048};
 					id=8;
 					side="WEST";
 					vehicle="B_diver_TL_F";
@@ -143,7 +143,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1795.4094,5.5,5963.9253};
+					position[]={2653.9175,26.371632,1296.4048};
 					id=9;
 					side="WEST";
 					vehicle="B_diver_exp_F";
@@ -152,7 +152,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1785.4094,5.5,5963.9253};
+					position[]={2643.9175,31.614948,1296.4048};
 					id=10;
 					side="WEST";
 					vehicle="B_diver_F";
@@ -160,7 +160,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={1800.4095,5.5,5958.9253};
+					position[]={2658.9175,23.010571,1291.4048};
 					id=11;
 					side="WEST";
 					vehicle="B_diver_F";
@@ -171,39 +171,29 @@ class Mission
 	};
 	class Markers
 	{
-		items=3;
+		items=2;
 		class Item0
 		{
-			position[]={1634.8018,1.7549071,5661.8511};
-			name="Outpost 2";
+			position[]={2425.7849,2.9072504,1138.8149};
+			name="Outpost 1";
+			text="Лазурный берег";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorOrange";
-			a=20;
-			b=80;
-			angle=141.92148;
+			a=50;
+			b=50;
 		};
 		class Item1
 		{
-			position[]={1681.547,5.5,5695.4946};
-			name="Exclude 2";
+			position[]={2986.7539,171.38931,1874.7676};
+			name="Outpost 2";
+			text="Конор";
 			markerType="RECTANGLE";
 			type="Empty";
-			colorName="ColorRed";
-			a=50;
-			b=100;
-			angle=-223.43895;
-		};
-		class Item2
-		{
-			position[]={2591.5176,107.93718,4967.0293};
-			name="Outpost 1";
-			markerType="RECTANGLE";
-			type="Empty";
-			colorName="ColorGreen";
-			a=20;
-			b=20;
-			angle=-39.217201;
+			colorName="ColorOrange";
+			a=32;
+			b=32;
+			angle=-35.284698;
 		};
 	};
 };

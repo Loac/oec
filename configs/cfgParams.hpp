@@ -3,9 +3,9 @@ class Params
     class outpostDistance
     {
         title = "$STR_OEC_param_outpostDistance";
-        values[] = { 300, 600, 900 };
-        texts[] = { "300", "600", "900" };
-        default = 300;
+        values[] = { 600, 900, 1200, 1500 };
+        texts[] = { "600", "900", "1200", "1500" };
+        default = 900;
     };
 
     class freezeTime
