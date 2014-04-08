@@ -179,7 +179,7 @@ class Mission
 			text="Лазурный берег";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorOrange";
+			colorName="ColorBlack";
 			a=50;
 			b=50;
 		};
@@ -190,7 +190,7 @@ class Mission
 			text="Конор";
 			markerType="RECTANGLE";
 			type="Empty";
-			colorName="ColorBlack";
+			colorName="ColorOrange";
 			a=32;
 			b=32;
 			angle=-35.284698;

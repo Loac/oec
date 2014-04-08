@@ -21,6 +21,14 @@
     https://community.bistudio.com/wiki/Ambient_Parameters
 */
 
+private [
+  "_position",
+  "_outpostMarkers",
+  "_outpostArea",
+  "_outpostPlaces",
+  "_excludeMarkers"
+];
+
 // Find outpost markers.
 _outpostMarkers = [OUTPOST_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 

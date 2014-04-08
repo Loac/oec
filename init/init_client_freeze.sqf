@@ -30,15 +30,11 @@ _freezeRange = freezeSize;
 
 // Add marker for freeze.
 [
-    "FREEZE", _freezePosition, [
-    ["shape", "ELLIPSE"],
-    ["size", [freezeSize, freezeSize]],
-    ["color", FREEZE_MARKER_COLOR],
-    ["alpha", 0.5]]
-] call lc_fnc_addMarker;
+    "", _freezePosition, nil, [freezeSize, freezeSize], "SolidBorder", nil, FREEZE_MARKER_COLOR, 0.5
+] call lc_fnc_addMarkerShape;
 
 // Show timer.
-_null = execVM "ui\ui_freezeTimer.sqf";
+[] execVM "ui\ui_freezeTimer.sqf";
 
 // Wait freezeTime is over.
 waitUntil {
@@ -56,11 +52,10 @@ waitUntil {
         // Get direction to center of start position.
        _freezeDir = ([_playerPosition, _freezePosition] call bis_fnc_dirTo);
 
-       // Move player back.
+        // Move player back.
         player setPos [
-            ((_freezePosition select 0) + (sin (_freezeDir + 180)) * (_freezeRange - 10)),
-            ((_freezePosition select 1) + (cos (_freezeDir + 180)) * (_freezeRange - 10)),
-            0
+            ((_freezePosition select 0) + (sin (_freezeDir + 180)) * (_freezeRange - 40)),
+            ((_freezePosition select 1) + (cos (_freezeDir + 180)) * (_freezeRange - 40))
         ];
 
         // Fade in screen.
@@ -72,3 +67,5 @@ waitUntil {
 
     freezeTime < 0;
 };
+
+[FREEZE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;

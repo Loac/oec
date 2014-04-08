@@ -8,15 +8,16 @@
     Parametes:
         0: Name (optional). If empty, it will be position.
         1: Position.
-        2: Type (optional).
-        2: Text (optional).
-        3: Direction (optional).
-        4: Color (optinal).
-        5: Alpha (optinal).
+        2: Shape (optional).
+        3: Size (optional).
+        4: Brush (optional).
+        5: Direction (optional).
+        6: Color (optinal).
+        7: Alpha (optinal).
 
     Example:
-        ["MARKER", position player, "mil_dot", "", 45, "ColorRed", 0.7] call lc_fnc_addMarkerIcon;
-        ["", position player, "mil_dot", "Hello World"] call lc_fnc_addMarkerIcon;
+        ["MARKER", position player, nil, nil, nil, 45, "ColorRed", 0.7] call lc_fnc_addMarkerShape;
+        ["", position player, "ELLIPSE", [20, 20], nil, nil, "ColorBlack"] call lc_fnc_addMarkerShape;
 
     See:
         https://community.bistudio.com/wiki/createMarker
@@ -34,7 +35,7 @@ private [
 _name = _this select 0;
 _position = _this select 1;
 _shape =  [_this, 2, "ELLIPSE"] call BIS_fnc_param;
-_size =  [_this, 3, ""] call BIS_fnc_param;
+_size =  [_this, 3, [10, 10], [[]]] call BIS_fnc_param;
 _brush =  [_this, 4, "Solid"] call BIS_fnc_param;
 _dir = [_this, 5, 0] call BIS_fnc_param;
 _color = [_this, 6, "ColorBlack"] call BIS_fnc_param;

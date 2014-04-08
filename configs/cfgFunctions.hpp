@@ -14,10 +14,9 @@ class CfgFunctions
         {
             class broadcast {};
             class fade {};
-            class addMarker {};
             class addMarkerIcon {};
             class addMarkerShape {};
-            class testMarker {};
+            class isSafe {};
             class getMarkersByColor {};
             class deleteMarkersByColor {};
             class hideMarkersByColor {};

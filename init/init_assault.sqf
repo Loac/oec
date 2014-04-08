@@ -19,6 +19,12 @@
     ---
 */
 
+private [
+  "_position",
+  "_excludeMarkers",
+  "_assaultPlaces"
+];
+
 // Get Exclude areas.
 _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
