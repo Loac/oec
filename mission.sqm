@@ -190,7 +190,7 @@ class Mission
 			text="Конор";
 			markerType="RECTANGLE";
 			type="Empty";
-			colorName="ColorOrange";
+			colorName="ColorBlack";
 			a=32;
 			b=32;
 			angle=-35.284698;

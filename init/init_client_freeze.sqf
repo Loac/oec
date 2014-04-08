@@ -28,6 +28,15 @@ switch (playerSide) do {
 
 _freezeRange = freezeSize;
 
+// Add marker for freeze.
+[
+    "FREEZE", _freezePosition, [
+    ["shape", "ELLIPSE"],
+    ["size", [freezeSize, freezeSize]],
+    ["color", FREEZE_MARKER_COLOR],
+    ["alpha", 0.5]]
+] call lc_fnc_addMarker;
+
 // Show timer.
 _null = execVM "ui\ui_freezeTimer.sqf";
 

@@ -42,7 +42,7 @@ player enableSimulation false;
 [false] call lc_fnc_enableAI;
 
 // Show intro.
-_handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
+//_handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
 
 // Blind player on prepare mission.
 ["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
