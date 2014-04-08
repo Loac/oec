@@ -5,6 +5,8 @@ onLoadName = "Op: Emerald City";
 onLoadMission = "Good luck";
 author = "Loac";
 
+#include "configs\cfgHeader.hpp"
 #include "configs\cfgParams.hpp"
 #include "configs\cfgFunctions.hpp"
+#include "configs\cfgDebriefing.hpp"
 #include "configs\cfgRscTitles.hpp"
