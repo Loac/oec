@@ -9,6 +9,10 @@
             <Original>Please, wait to start mission.</Original>
             <Russian>Пожалуйста, дождитесь начала миссии.</Russian>
         </Key>
+        <Key ID="STR_OEC_intro_object_name">
+            <Original>Object: %1</Original>
+            <Russian>Объект: %1</Russian>
+        </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_OEC_param_outpostDistance">

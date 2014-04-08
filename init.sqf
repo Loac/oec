@@ -51,7 +51,7 @@ freezeSize = 50;
 // assaultGroups = [];
 
 // Selected outpost marker.
-outpostArea = [];
+outpostArea = "";
 
 // Outpost and start position for assault.
 outpostPosition = [];
