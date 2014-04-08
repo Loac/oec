@@ -25,7 +25,8 @@ private [
     "_maxTry",
     "_position",
     "_positionCandidate",
-    "_area"
+    "_area",
+    "_isSafe"
 ];
 
 // Areas for finding position
@@ -43,6 +44,9 @@ _maxTry = [_this, 3, 50] call BIS_fnc_param;
 // Valid position. Result of function.
 _position = [0, 0];
 
+// By default position is safe.
+_isSafe = true;
+
 // Find valid position.
 for "_i" from 0 to _maxTry -1 do {
     // Select random area (marker).
@@ -58,13 +62,13 @@ for "_i" from 0 to _maxTry -1 do {
         };
     } forEach _excludeMarkers;
 
-    // If need chek safe position.
+    // If need check safe position.
     if (_safe and count _positionCandidate > 0) then {
-        _positionCandidate = _positionCandidate isFlatEmpty [];
+        _isSafe = [_positionCandidate] call lc_fnc_isSafe;
     };
 
     // If candidate is valid.
-    if (count _positionCandidate > 0) exitWith {
+    if (_isSafe and count _positionCandidate > 0) exitWith {
       _position = _positionCandidate;
     };
 };

@@ -26,6 +26,7 @@ private [
     "_mDir",
     "_tPosX", "_tPosY",
     "_dir",
+    "_isSafe",
     "_position"
 ];
 
@@ -54,6 +55,9 @@ _mSizeX = markerSize _marker select 0;
 _mSizeY = markerSize _marker select 1;
 _mDir = markerDir _marker;
 _mShape = markerShape _marker == "RECTANGLE";
+
+// By default position is safe.
+_isSafe = true;
 
 // Find valid position.
 for "_i" from 0 to _maxTry -1 do {
@@ -104,13 +108,13 @@ for "_i" from 0 to _maxTry -1 do {
         };
     } forEach _excludeMarkers;
 
-    // If need chek safe position.
+    // If need check safe position.
     if (_safe and count _positionCandidate > 0) then {
-        _positionCandidate = _positionCandidate isFlatEmpty [];
+        _isSafe = [_positionCandidate] call lc_fnc_isSafe;
     };
 
     // If candidate is valid.
-    if (count _positionCandidate > 0) exitWith {
+    if (_isSafe and count _positionCandidate > 0) exitWith {
       _position = _positionCandidate;
     };
 };
