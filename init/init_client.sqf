@@ -35,6 +35,9 @@ player enableSimulation false;
 // Hide setting markers.
 [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR] call lc_fnc_hideMarkersByColor;
 
+// Hide player's waypoints
+// { _x setWaypointVisible false } forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
+
 // Disable AI.
 [false] call lc_fnc_enableAI;
 

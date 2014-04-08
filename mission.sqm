@@ -18,17 +18,17 @@ class Mission
 	randomSeed=8380803;
 	class Intel
 	{
-		startWeather=0.29999998;
+		startWeather=0.30000001;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.29999998;
+		forecastWeather=0.30000001;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		year=2035;
 		month=7;
 		day=6;
-		hour=13;
+		hour=14;
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;

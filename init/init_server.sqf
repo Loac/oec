@@ -1,18 +1,18 @@
 /*
-  Author:
-    ---
+    Author:
+        ---
 
-  Description:
-    ---
+    Description:
+        ---
 
-  Global variables:
-    ---
+    Global variables:
+        ---
 
-  Example:
-    ---
+    Example:
+        ---
 
-  See:
-    ---
+    See:
+        ---
 */
 
 /*

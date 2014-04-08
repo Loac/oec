@@ -1,18 +1,22 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Main initialization.
+    Description:
+        Main initialization.
 
-  Global variables:
-    serverState
-    outpost
-    assault
-    outpostUnits
-    assaultUnits
-    outpostArea
-    assaultArea
+    Global variables:
+        startMission
+        serverState
+        outpost
+        assault
+        outpostArea
+        outpostUnits
+        assaultUnits
+        outpostPosition
+        assaultPosition
+        outpostReady
+        assaultReady
 */
 
 /*
@@ -23,7 +27,7 @@
 OUTPOST_MARKER_COLOR = "ColorOrange";
 EXCLUDE_MARKER_COLOR = "ColorRed";
 
-// Flag mission start.
+// Flag to mission start.
 startMission = false;
 
 // Role of sides.
@@ -35,18 +39,21 @@ assault = east;
 outpostUnits = [];
 assaultUnits = [];
 
+// Flags for early start.
+outpostReady = false;
+assaultReady = false;
+
+// Size for freeze zone.
+freezeSize = 50;
+
 // Groups by role.
 // outpostGroups = [];
 // assaultGroups = [];
 
-// Marker for outpost.
-// It parameters will be used for make triggers, start position and etc.
+// Selected outpost marker.
 outpostArea = [];
 
-// Start position of assault.
-assaultArea = [];
-
-// Temp.
+// Outpost and start position for assault.
 outpostPosition = [];
 assaultPosition = [];
 

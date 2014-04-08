@@ -7,8 +7,9 @@
     Teleport units.
 
   Global variables:
-    outpostArea
+    outpostPosition
     outpostUnits
+    outpostArea
     OUTPOST_MARKER_COLOR
 
   Example:
@@ -24,13 +25,13 @@
 _outpostMarkers = [OUTPOST_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
 // Select one.
-outpostArea = _outpostMarkers call BIS_fnc_selectRandom;
+_outpostArea = _outpostMarkers call BIS_fnc_selectRandom;
 
 // Get Exclude areas.
 _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
 // Try to find some point for make teleport places.
-_position = [[outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
+_position = [[_outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
 
 // Find places for all outpost units.
 // TODO: Need check possible empty _position.
@@ -42,3 +43,9 @@ _outpostPlaces = selectBestPlaces [_position, 25, "meadow+trees", 5, count outpo
 {
     _x setPos ((_outpostPlaces call BIS_fnc_arrayPop) select 0);
 } forEach outpostUnits;
+
+// Remember spawn position for make player markers, triggers, freeze zone and etc.
+outpostPosition = _position;
+
+// Remember selected outpost marker for locate assault. See: init_assault.sqf.
+outpostArea = _outpostArea;
