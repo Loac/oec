@@ -57,3 +57,13 @@ outpostPosition = _position;
 
 // Remember selected outpost marker for locate assault. See: init_assault.sqf.
 outpostArea = _outpostArea;
+
+// Add outpost marker.
+[
+    "",
+    markerPos outpostArea,
+    markerShape outpostArea,
+    markerSize outpostArea, "SolidBorder",
+    markerDir outpostArea,
+    OBJECT_MARKER_COLOR, 0.5
+] call lc_fnc_addMarkerShape;
