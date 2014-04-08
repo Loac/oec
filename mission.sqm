@@ -171,22 +171,22 @@ class Mission
 	};
 	class Markers
 	{
-		items=2;
+		items=5;
 		class Item0
 		{
 			position[]={2425.7849,2.9072504,1138.8149};
-			name="Outpost 1";
+			name="Лазурный берег";
 			text="Лазурный берег";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlack";
+			colorName="ColorOrange";
 			a=50;
 			b=50;
 		};
 		class Item1
 		{
 			position[]={2986.7539,171.38931,1874.7676};
-			name="Outpost 2";
+			name="Конор";
 			text="Конор";
 			markerType="RECTANGLE";
 			type="Empty";
@@ -194,6 +194,40 @@ class Mission
 			a=32;
 			b=32;
 			angle=-35.284698;
+		};
+		class Item2
+		{
+			position[]={3292.7778,229.11954,2937.209};
+			name="Максвел";
+			text="Максвел";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=40;
+			b=40;
+		};
+		class Item3
+		{
+			position[]={6063.3413,17.962555,5621.4678};
+			name="Тутанхамон";
+			text="Тутанхамон";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=50;
+			b=50;
+		};
+		class Item4
+		{
+			position[]={6434.3433,7.9534655,5391.3784};
+			name="Зона 51";
+			text="Зона 51";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=70;
+			b=42;
+			angle=41.909599;
 		};
 	};
 };

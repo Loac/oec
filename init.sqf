@@ -28,6 +28,7 @@ OUTPOST_MARKER_COLOR = "ColorOrange";
 EXCLUDE_MARKER_COLOR = "ColorRed";
 DISABLE_MARKER_COLOR = "ColorBlack";
 FREEZE_MARKER_COLOR = "Color1_FD_F";
+OBJECT_MARKER_COLOR = "ColorUNKNOWN";
 
 // Flag to mission start.
 startMission = false;

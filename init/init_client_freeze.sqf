@@ -54,8 +54,8 @@ waitUntil {
 
         // Move player back.
         player setPos [
-            ((_freezePosition select 0) + (sin (_freezeDir + 180)) * (_freezeRange - 40)),
-            ((_freezePosition select 1) + (cos (_freezeDir + 180)) * (_freezeRange - 40))
+            ((_freezePosition select 0) + (sin (_freezeDir + 180)) * (_freezeRange - 10)),
+            ((_freezePosition select 1) + (cos (_freezeDir + 180)) * (_freezeRange - 10))
         ];
 
         // Fade in screen.
