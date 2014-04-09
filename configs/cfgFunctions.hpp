@@ -25,6 +25,7 @@ class CfgFunctions
             class getPositionAroundMarker {};
             class randomPosTrigger {};
             class timeToTimer {};
+            class request {};
         };
     };
 };

@@ -73,9 +73,7 @@ _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 //     };
 // };
 
-cc = false;
-test = 0;
-"cc" addPublicVariableEventHandler {
+"request" addPublicVariableEventHandler {
     [
       ["outpostArea"],
       ["outpostPosition"],
