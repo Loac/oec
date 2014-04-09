@@ -39,11 +39,14 @@ waitUntil { not isNull Player and isPlayer Player };
     // Disable AI.
     [false] call lc_fnc_enableAI;
 
-// Wait server.
-waitUntil { prepareMission };
+    cc = true;
+    publicVariable "cc";
 
+// Wait server.
+"prepareMission" addPublicVariableEventHandler {
     // Set markers for player by side.
     [] execVM "init\init_client_markers.sqf";
+};
 
 // Wait server.
 waitUntil { startMission };
