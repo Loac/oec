@@ -44,13 +44,3 @@ _assaultPlaces = selectBestPlaces [_position, 25, "meadow+trees", 5, count assau
 
 // Remember spawn position for make player markers, triggers, freeze zone and etc.
 assaultPosition = _position;
-
-// Add outpost marker.
-[
-    "",
-    markerPos outpostArea,
-    markerShape outpostArea,
-    markerSize outpostArea, "SolidBorder",
-    markerDir outpostArea,
-    OBJECT_MARKER_COLOR, 0.5
-] call lc_fnc_addMarkerShape;

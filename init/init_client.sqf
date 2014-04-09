@@ -67,6 +67,9 @@ _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle
     // Add radio commands.
     [] execVM "init\init_client_radio.sqf";
 
+    // Add markers for players.
+    [] execVM "init\init_client_markers.sqf";
+
     // Init complete, now player can see and move.
     ["in"] call lc_fnc_fade;
 };
