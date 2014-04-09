@@ -16,12 +16,17 @@
     ---
 */
 
-// Add outpost marker.
+private [
+  "_position"
+];
+
+// Set freeze zone parameters.
+switch (playerSide) do {
+    case outpost: { _position = outpostPosition };
+    case assault: { _position = assaultPosition };
+};
+
+// Add marker for freeze.
 [
-    "",
-    markerPos outpostArea,
-    markerShape outpostArea,
-    markerSize outpostArea, "SolidBorder",
-    markerDir outpostArea,
-    OBJECT_MARKER_COLOR, 0.5
+    "", _position, nil, [freezeSize, freezeSize], "SolidBorder", nil, FREEZE_MARKER_COLOR, 0.5
 ] call lc_fnc_addMarkerShape;

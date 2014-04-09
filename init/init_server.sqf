@@ -49,9 +49,6 @@
     Включить картинку.
 */
 
-// Strange pause for MP.
-waitUntil { time > 0 };
-
 // Load params.
 _handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
 
@@ -64,11 +61,43 @@ _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 // Assault initialization procedures.
 _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 
+// onPlayerConnected {
+//     [
+//         ["prepareMission", true],
+//         ["outpostPosition"],
+//         ["assaultPosition"]
+//     ] call lc_fnc_broadcast;
+// };
+
+// [] spawn {
+//     while {true} do {
+//       [
+//           // ["prepareMission", true],
+//           ["outpostArea"],
+//           ["outpostPosition"],
+//           ["assaultPosition"]
+//       ] call lc_fnc_broadcast;
+//       sleep 1;
+//     };
+// };
+
+onPlayerConnected { [] execVM "init\init_update.sqf" };
+
+// Post init.
+waitUntil { time > 0 };
+
+// Teleport units.
+_handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
+
 // Init freeze time.
-_handle = [] execVM "init\init_freeze.sqf";
+[] execVM "init\init_freeze.sqf";
 
 // Disable AI.
 [false] call lc_fnc_enableAI;
 
 // Server complete initialization state.
-[["startMission", true]] call lc_fnc_broadcast;
+[
+    ["startMission", true],
+    ["outpostArea"],
+    ["aiEnable"]
+] call lc_fnc_broadcast;

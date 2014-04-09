@@ -33,6 +33,9 @@ OBJECT_MARKER_COLOR = "ColorUNKNOWN";
 // Flag to mission start.
 startMission = false;
 
+// Flag to mission prepare.
+prepareMission = false;
+
 // Role of sides.
 // TODO: It must be selectable.
 outpost = west;
@@ -60,15 +63,16 @@ outpostArea = "";
 outpostPosition = [];
 assaultPosition = [];
 
-
 /*
-    Server Initializations.
+    Initializations.
 */
+
 if (isServer) then {
+
     /*
         Server initialization.
     */
-    _handle = [] execVM "init\init_server.sqf";
+    [] execVM "init\init_server.sqf";
 };
 
 if (not isDedicated) then {

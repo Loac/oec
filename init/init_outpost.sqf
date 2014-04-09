@@ -22,7 +22,6 @@
 */
 
 private [
-  "_position",
   "_outpostMarkers",
   "_outpostArea",
   "_outpostPlaces",
@@ -39,21 +38,17 @@ _outpostArea = _outpostMarkers call BIS_fnc_selectRandom;
 _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
 // Try to find some point for make teleport places.
-_position = [[_outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
-
-// Find places for all outpost units.
-// TODO: Need check possible empty _position.
-_outpostPlaces = selectBestPlaces [_position, 25, "meadow+trees", 5, count outpostUnits];
-
-// Teleport units.
-// TODO: Teleport by groups.
-// TODO: Rotate all units each group to leader formation.
-{
-    _x setPos ((_outpostPlaces call BIS_fnc_arrayPop) select 0);
-} forEach outpostUnits;
-
-// Remember spawn position for make player markers, triggers, freeze zone and etc.
-outpostPosition = _position;
+outpostPosition = [[_outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
 
 // Remember selected outpost marker for locate assault. See: init_assault.sqf.
 outpostArea = _outpostArea;
+
+// Add outpost marker for all users.
+[
+    "",
+    markerPos outpostArea,
+    markerShape outpostArea,
+    markerSize outpostArea, "SolidBorder",
+    markerDir outpostArea,
+    OBJECT_MARKER_COLOR, 0.5
+] call lc_fnc_addMarkerShape;

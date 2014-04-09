@@ -15,48 +15,47 @@
     ---
 */
 
-/*
-    Magic.
-*/
+// Magic.
 waitUntil { not isNull Player and isPlayer Player };
 
-// Disable saving.
-enableSaving [false, false];
+    // Disable saving.
+    enableSaving [false, false];
 
-// Radio off.
-enableRadio false;
+    // Radio off.
+    enableRadio false;
 
-// God mod for possible freeze time.
-player allowDamage false;
+    // God mod for possible freeze time.
+    player allowDamage false;
 
-// Paralyze player.
-player enableSimulation false;
+    // Paralyze player.
+    player enableSimulation false;
 
-// Hide setting markers.
-[OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_hideMarkersByColor;
+    // Hide setting markers.
+    [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_hideMarkersByColor;
 
-// Hide player's waypoints
-// { _x setWaypointVisible false } forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
+    // Hide player's waypoints
+    // { _x setWaypointVisible false } forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
 
-// Disable AI.
-[false] call lc_fnc_enableAI;
+    // Disable AI.
+    [false] call lc_fnc_enableAI;
 
-// Show intro.
-_handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
+// Wait server.
+waitUntil { prepareMission };
 
-// Blind player on prepare mission.
-["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
+    // Set markers for player by side.
+    [] execVM "init\init_client_markers.sqf";
 
-// Emulate addPublicVariableEventHandler for single player.
-[] spawn {
-    // Wait server.
-    waitUntil { startMission };
+// Wait server.
+waitUntil { startMission };
+
+    // Show intro.
+    _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
+
+    // Blind player on prepare mission.
+    ["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
 
     // Unparalyze player.
     player enableSimulation true;
-
-    // Remove setting markers.
-    [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
 
     // Enable tags.
     [] execVM "init\init_client_tags.sqf";
@@ -67,12 +66,17 @@ _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle
     // Add radio commands.
     [] execVM "init\init_client_radio.sqf";
 
-    // Add markers for players.
-    [] execVM "init\init_client_markers.sqf";
+    // Remove setting markers.
+    [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
 
     // Init complete, now player can see and move.
     ["in"] call lc_fnc_fade;
-};
+
+
+
+
+
+
 
 // "serverState" addPublicVariableEventHandler {
 //     hint format [
