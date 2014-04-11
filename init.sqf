@@ -19,6 +19,9 @@
         assaultReady
 */
 
+// Debug.
+dblog = compile preprocessFile "devel\dev_dblog.sqf";
+
 /*
     Global variables.
 */
