@@ -35,6 +35,9 @@ waitUntil { not isNull Player and isPlayer Player };
 
     // Hide player's waypoints
     // { _x setWaypointVisible false } forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
+//     disableSerialization;
+//     (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "ASSAULT"];
+//     ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
 
     // Set markers for player by side.
     [] execVM "init\init_client_markers.sqf";
@@ -78,45 +81,3 @@ waitUntil { startMission };
     if (devel) then {
         [] execVM "init\init_client_devel.sqf";
     };
-
-
-
-
-
-
-
-// "serverState" addPublicVariableEventHandler {
-//     hint format [
-//         "%1 has been updated to: %2",
-//         _this select 0,
-//         _this select 1
-//     ]
-// };
-
-//execVM "A3\Missions_F_EPA\Campaign_shared\Scripts\zoneRestriction_warn_A.sqf"
-//execVM "A3\Missions_F_EPA\Campaign_shared\Scripts\zoneRestriction_punish_A.sqf"
-
-
-// [format ["%1_blackScreen", missionName], false] call BIS_fnc_blackOut;
-// enableRadio false; BIS_inf enableSimulation false;
-// format ["%1_disabledSave", missionName] call BIS_fnc_disableSaving;
-
-//["in"] call sandbox_fnc_fade;
-
-
- // this setCaptive true;
- // {this disableAI _x} forEach ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"];
- // removeAllWeapons this;
- // removeAllAssignedItems this;
- // removeAllItems this;
- // this unlinkItem "NVGoggles";
- // removeHeadgear this;
- // removeGoggles this;
- // this setBehaviour "CARELESS";
- // this setCombatMode "BLUE";
- // this attachTo [BIS_logic1, [0,0,0]]
-
-
-// test = call BIS_fnc_worldArea;
-// testPos = test call BIS_fnc_randomPosTrigger;
-// player setPos testPos;

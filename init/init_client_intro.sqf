@@ -12,9 +12,6 @@ private [
     "_position"
 ];
 
-// Wait for server finding outpost position.
-waitUntil { not (outpostArea == "") };
-
 // Set color.
 _color = sideUnknown call BIS_fnc_sideColor;
 

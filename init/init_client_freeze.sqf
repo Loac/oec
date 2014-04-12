@@ -29,7 +29,9 @@ switch (playerSide) do {
 _freezeRange = freezeSize;
 
 // Show timer.
-[] execVM "ui\ui_freezeTimer.sqf";
+if (freezeTime > 0) then {
+    [] execVM "ui\ui_freezeTimer.sqf";
+};
 
 // Wait freezeTime is over.
 waitUntil {
