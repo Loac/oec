@@ -3,10 +3,11 @@
     Dmitry Loac
 
   Description:
-    Add markers for players.
+    Init markers for players.
 
   Global variables:
-    outpostArea
+    outpost
+    assault
     OBJECT_MARKER_COLOR
 
   Example:
@@ -16,17 +17,9 @@
     ---
 */
 
-private [
-  "_position"
-];
-
-// Set freeze zone parameters.
+// Remove markers on enemy start positions.
 switch (playerSide) do {
-    case outpost: { _position = outpostPosition };
-    case assault: { _position = assaultPosition };
+    case outpost: { deleteMarkerLocal "ASSAULT" };
+    case assault: { deleteMarkerLocal "OUTPOST" };
 };
 
-// Add marker for freeze.
-[
-    "", _position, nil, [freezeSize, freezeSize], "SolidBorder", nil, FREEZE_MARKER_COLOR, 0.5
-] call lc_fnc_addMarkerShape;

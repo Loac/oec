@@ -52,3 +52,8 @@ outpostArea = _outpostArea;
     markerDir outpostArea,
     OBJECT_MARKER_COLOR, 0.5
 ] call lc_fnc_addMarkerShape;
+
+// Add marker for outpost.
+[
+    "OUTPOST", outpostPosition, nil, [freezeSize, freezeSize], "SolidBorder", nil, FREEZE_MARKER_COLOR, 0.5
+] call lc_fnc_addMarkerShape;
