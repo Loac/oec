@@ -35,7 +35,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=2;
 		class Item0
 		{
 			side="EAST";
@@ -121,49 +121,6 @@ class Mission
 					id=7;
 					side="WEST";
 					vehicle="B_soldier_AAR_F";
-					skill=0.40000001;
-				};
-			};
-		};
-		class Item2
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={2648.9175,30.518524,1301.4048};
-					id=8;
-					side="WEST";
-					vehicle="B_diver_TL_F";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.5;
-				};
-				class Item1
-				{
-					position[]={2653.9175,26.371632,1296.4048};
-					id=9;
-					side="WEST";
-					vehicle="B_diver_exp_F";
-					rank="CORPORAL";
-					skill=0.44999999;
-				};
-				class Item2
-				{
-					position[]={2643.9175,31.614948,1296.4048};
-					id=10;
-					side="WEST";
-					vehicle="B_diver_F";
-					skill=0.40000001;
-				};
-				class Item3
-				{
-					position[]={2658.9175,23.010571,1291.4048};
-					id=11;
-					side="WEST";
-					vehicle="B_diver_F";
 					skill=0.40000001;
 				};
 			};

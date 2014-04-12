@@ -3,7 +3,7 @@
         Dmitry Loac
 
     Description:
-        Main initialization.
+        Quick random attack and defence mission.
 
     Global variables:
         devel
@@ -24,6 +24,11 @@
     Params variable:
         outpostDistance
         freezeTime
+        envSeason
+        envTime
+        envOvercast
+        envFog
+        envRain
         aiEnable
 */
 
@@ -106,3 +111,32 @@ if (not isDedicated) then {
 //   (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "ASSAULT"];
 //   ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
 // };
+
+
+/*
+    Поведение и вейпоинты для ботов.
+
+    Параметр времени удержания
+
+    Параметры необходимого соотношения войск для победы для каждой из сторон.
+
+    Установить условия победы
+        Для обороны
+            С истечением заданного времени, на объекте все еще есть войска обороны.
+            Соотношение сил в пользу обороны.
+        Для нападения
+            Присутсвие войск обороны на объекте меньше необходимого соотношения более минуты.
+            Соотношение сил в пользу нападения.
+
+    Арбитр, который следит за условиями победы и порожения.
+
+    Триггеры.
+
+    Брифинг.
+
+    Параметр спавна транспорта.
+
+    Спавн транспорта.
+
+    Расширенное описание объектов для брифинга.
+*/

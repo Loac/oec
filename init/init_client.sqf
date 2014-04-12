@@ -1,18 +1,9 @@
 /*
-  Author:
-    ---
+    Author:
+        Dmitry Loac
 
-  Description:
-    ---
-
-  Global variables:
-    ---
-
-  Example:
-    ---
-
-  See:
-    ---
+    Description:
+        Client initialization.
 */
 
 // Magic.
@@ -55,7 +46,7 @@ waitUntil { startMission };
     _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
 
     // Blind player on prepare mission.
-    ["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
+    // ["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
 
     // Unparalyze player.
     player enableSimulation true;
@@ -75,7 +66,7 @@ waitUntil { startMission };
     [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
 
     // Init complete, now player can see and move.
-    ["in"] call lc_fnc_fade;
+    // ["in"] call lc_fnc_fade;
 
     // Enable devel options.
     if (devel) then {
