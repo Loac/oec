@@ -64,6 +64,9 @@ _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 // Wait to start mission.
 waitUntil { time > 0 };
 
+// Init environment.
+_handle = [] execVM "init\init_environment.sqf"; waitUntil { scriptDone _handle };
+
 // Teleport units.
 _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 
@@ -75,9 +78,10 @@ _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 
 // Server complete initialization state.
 [
-    ["startMission", true],
     ["outpostArea"],
     ["outpostPosition"],
     ["assaultPosition"],
-    ["aiEnable"]
+    ["environment"],
+    ["aiEnable"],
+    ["startMission", true]
 ] call lc_fnc_broadcast;

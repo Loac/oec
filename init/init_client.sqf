@@ -45,6 +45,9 @@ waitUntil { startMission };
     // Disable AI.
     [false] call lc_fnc_enableAI;
 
+    // Set environment.
+    [environment] call lc_fnc_setEnvironment;
+
     // Show intro.
     _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
 

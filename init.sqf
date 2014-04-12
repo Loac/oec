@@ -19,6 +19,7 @@
         outpostReady
         assaultReady
         freezeSize
+        environment
 
     Params variable:
         outpostDistance
@@ -77,6 +78,9 @@ outpostArea = "";
 // Outpost and start position for assault.
 outpostPosition = [];
 assaultPosition = [];
+
+// Environment settings.
+environment = [];
 
 /*
     Initializations.

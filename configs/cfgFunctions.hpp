@@ -27,6 +27,8 @@ class CfgFunctions
             class timeToTimer {};
             class request {};
             class teleport {};
+            class setEnvironment {};
+            class getRandomValue {};
         };
     };
 };

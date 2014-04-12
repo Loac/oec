@@ -23,9 +23,117 @@
             <Original>Freeze time</Original>
             <Russian>Время на подготовку</Russian>
         </Key>
+        <Key ID="STR_OEC_param_envTime">
+            <Original>Time of day</Original>
+            <Russian>Время суток</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_envOvercast">
+            <Original>Overcast</Original>
+            <Russian>Облачность</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_envFog">
+            <Original>Fog</Original>
+            <Russian>Туман</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_envRain">
+            <Original>Rain</Original>
+            <Russian>Дождь</Russian>
+        </Key>
         <Key ID="STR_OEC_param_aiEnable">
             <Original>Enable AI</Original>
             <Russian>Включить ботов</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Random">
+            <Original>Random</Original>
+            <Russian>Случайно</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_No">
+            <Original>No</Original>
+            <Russian>Нет</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Yes">
+            <Original>Yes</Original>
+            <Russian>Да</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Little">
+            <Original>Little</Original>
+            <Russian>Немного</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Middle">
+            <Original>Middle</Original>
+            <Russian>Средне</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_High">
+            <Original>High</Original>
+            <Russian>Сильно</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Full">
+            <Original>Full</Original>
+            <Russian>Очень сильно</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_envSeason">
+            <Original>Season</Original>
+            <Russian>Время года</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Winter">
+            <Original>Winter</Original>
+            <Russian>Зима</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Spring">
+            <Original>Spring</Original>
+            <Russian>Весна</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Summer">
+            <Original>Summer</Original>
+            <Russian>Лето</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Autumn">
+            <Original>Autumn</Original>
+            <Russian>Осень</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Dark_night">
+            <Original>Dark night</Original>
+            <Russian>Глубокая ночь</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Early_morning">
+            <Original>Early morning</Original>
+            <Russian>Раннее утро</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Morning">
+            <Original>Morning</Original>
+            <Russian>Утро</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Afternoon">
+            <Original>Afternoon</Original>
+            <Russian>День</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Sundown">
+            <Original>Sundown</Original>
+            <Russian>Вечер</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Night">
+            <Original>Night</Original>
+            <Russian>Ночь</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Clear">
+            <Original>Clear</Original>
+            <Russian>Чистое небо</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Partly_cloudy">
+            <Original>Partly cloudy</Original>
+            <Russian>Переменная облачность</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Cloudy">
+            <Original>Cloudy</Original>
+            <Russian>Облачно</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Overcast">
+            <Original>Overcast</Original>
+            <Russian>Пасмурно</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_value_Storm">
+            <Original>Storm</Original>
+            <Russian>Шторм</Russian>
         </Key>
     </Package>
 </Project>
