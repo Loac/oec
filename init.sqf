@@ -21,6 +21,7 @@
 
 // Debug.
 dblog = compile preprocessFile "devel\dev_dblog.sqf";
+["", "clear"] call dblog;
 
 /*
     Global variables.

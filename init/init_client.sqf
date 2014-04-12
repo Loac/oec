@@ -39,32 +39,8 @@ waitUntil { not isNull Player and isPlayer Player };
     // Disable AI.
     [false] call lc_fnc_enableAI;
 
-// Send request.
-request = 0;
-publicVariableServer "request";
-
-// cnt1 = 0;
-// "req" addPublicVariableEventHandler {
-//     cnt1 = cnt1 + 1;
-//     publicVariable "cnt1";
-// };
-
-// cnt2 = 0;
-// "req" addPublicVariableEventHandler {
-//     cnt2 = cnt2 + 1;
-//     publicVariable "cnt2";
-// };
-
-// req = 1; publicVariable "req";
-
-waitUntil { prepareMission };
-
-// And wait answer from server.
-//"prepareMission" addPublicVariableEventHandler {
     // Set markers for player by side.
     [] execVM "init\init_client_markers.sqf";
-//};
-
 
 // Wait server.
 waitUntil { startMission };

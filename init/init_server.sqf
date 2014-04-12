@@ -61,27 +61,6 @@ _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 // Assault initialization procedures.
 _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 
-// [] spawn {
-//     while {true} do {
-//       [
-//           ["outpostArea"],
-//           ["outpostPosition"],
-//           ["assaultPosition"],
-//           ["prepareMission", true]
-//       ] call lc_fnc_broadcast;
-//       sleep 1;
-//     };
-// };
-
-"request" addPublicVariableEventHandler {
-    [
-      ["outpostArea"],
-      ["outpostPosition"],
-      ["assaultPosition"],
-      ["prepareMission", true]
-    ] call lc_fnc_broadcast;
-};
-
 // Post init.
 waitUntil { time > 0 };
 
@@ -98,5 +77,7 @@ _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 [
     ["startMission", true],
     ["outpostArea"],
+    ["outpostPosition"],
+    ["assaultPosition"],
     ["aiEnable"]
 ] call lc_fnc_broadcast;
