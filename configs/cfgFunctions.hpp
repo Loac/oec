@@ -26,6 +26,7 @@ class CfgFunctions
             class randomPosTrigger {};
             class timeToTimer {};
             class request {};
+            class teleport {};
         };
     };
 };
