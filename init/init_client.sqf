@@ -57,6 +57,8 @@ waitUntil { startMission };
     // Unparalyze player.
     player enableSimulation true;
 
+    [] execVM "init\init_client_infoText.sqf";
+
     // Enable tags.
     [] execVM "init\init_client_tags.sqf";
 
