@@ -1,5 +1,3 @@
-#define true 1
-#define false 0
 #define CT_STATIC 0
 #define ST_CENTER 2
 
@@ -22,7 +20,7 @@ class RscTitles
         duration = 1e+011;
         onLoad = "uiNamespace setVariable ['rscTimer', _this select 0];";
         onUnLoad = "uiNamespace setVariable ['rscTimer', nil]";
-        movingEnable = false;
+        movingEnable = 0;
         controlsBackground[] = { };
         fadein = 1;
         fadeout = 1;

@@ -6,6 +6,7 @@
         Main initialization.
 
     Global variables:
+        devel
         startMission
         serverState
         outpost
@@ -17,11 +18,22 @@
         assaultPosition
         outpostReady
         assaultReady
+        freezeSize
+
+    Params variable:
+        outpostDistance
+        freezeTime
+        aiEnable
 */
 
+// Devel.
+devel = true;
+
 // Debug.
-dblog = compile preprocessFile "devel\dev_dblog.sqf";
-["", "clear"] call dblog;
+if (devel) then {
+    dblog = compile preprocessFile "devel\dev_dblog.sqf";
+    ["", "clear"] call dblog;
+};
 
 /*
     Global variables.
@@ -38,9 +50,6 @@ CLIENT_STATE_CONNECTED = 1; // Connected.
 
 // Flag to mission start.
 startMission = false;
-
-// Flag to mission prepare.
-prepareMission = false;
 
 // Role of sides.
 // TODO: It must be selectable.
@@ -74,11 +83,10 @@ assaultPosition = [];
 */
 
 if (isServer) then {
-
     /*
         Server initialization.
     */
-    [] execVM "init\init_server.sqf";
+    _handle = [] execVM "init\init_server.sqf"; waitUntil { scriptDone _handle };
 };
 
 if (not isDedicated) then {
@@ -91,6 +99,6 @@ if (not isDedicated) then {
 
 // x = [] spawn
 // {
-//   (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "Outpost 1"];
+//   (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "ASSAULT"];
 //   ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
 // };

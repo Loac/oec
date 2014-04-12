@@ -63,4 +63,14 @@ waitUntil {
     freezeTime < 0;
 };
 
-[FREEZE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
+/*
+    Post freeze time actions.
+*/
+
+// Disable god mod.
+player allowDamage true;
+
+// Enable AI.
+if (aiEnable) then {
+    [true] call lc_fnc_enableAI;
+};

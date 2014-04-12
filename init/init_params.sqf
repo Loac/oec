@@ -17,3 +17,6 @@ for "_index" from 0 to (count paramsArray) - 1 do {
 
     call compile format["%1 = %2", _name, _value];
 };
+
+// Convert to boolean.
+aiEnable = aiEnable > 0;

@@ -61,17 +61,17 @@ _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 // Assault initialization procedures.
 _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 
-// Post init.
+// Wait to start mission.
 waitUntil { time > 0 };
 
 // Teleport units.
 _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 
-// Init freeze time.
-[] execVM "init\init_freeze.sqf";
-
 // Disable AI.
 [false] call lc_fnc_enableAI;
+
+// Init freeze time.
+[] execVM "init\init_freeze.sqf";
 
 // Server complete initialization state.
 [

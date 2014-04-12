@@ -19,7 +19,7 @@ class Params
     class aiEnable
     {
         title = "$STR_OEC_param_aiEnable";
-        values[] = { 0, 1 };
+        values[] = { 1, 0 };
         texts[] = { "Off", "On" };
         default = 1;
     };

@@ -36,14 +36,14 @@ waitUntil { not isNull Player and isPlayer Player };
     // Hide player's waypoints
     // { _x setWaypointVisible false } forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
 
-    // Disable AI.
-    [false] call lc_fnc_enableAI;
-
     // Set markers for player by side.
     [] execVM "init\init_client_markers.sqf";
 
-// Wait server.
+// Wait to start mission.
 waitUntil { startMission };
+
+    // Disable AI.
+    [false] call lc_fnc_enableAI;
 
     // Show intro.
     _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };

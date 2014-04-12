@@ -25,3 +25,15 @@ waitUntil {
     // Wait for timer is over or both sides is ready.
     freezeTime < 0;
 };
+
+/*
+    Post freeze time actions.
+*/
+
+// Delete freeze zone markers.
+[FREEZE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
+
+// Enable AI.
+if (aiEnable) then {
+    [true] call lc_fnc_enableAI;
+};

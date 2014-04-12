@@ -20,7 +20,7 @@
 */
 
 {
-    if (aiEnable > 0 or isPlayer _x) then {
+    if (aiEnable or isPlayer _x) then {
         switch (side _x) do {
             case outpost: { outpostUnits = outpostUnits + [_x] };
             case assault: { assaultUnits = assaultUnits + [_x] };
