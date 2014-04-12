@@ -69,6 +69,11 @@ waitUntil { startMission };
     // Init complete, now player can see and move.
     ["in"] call lc_fnc_fade;
 
+    // Enable devel options.
+    if (devel) then {
+        [] execVM "init\init_client_devel.sqf";
+    };
+
 
 
 
