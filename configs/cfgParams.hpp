@@ -3,9 +3,25 @@ class Params
     class outpostDistance
     {
         title = "$STR_OEC_param_outpostDistance";
-        values[] = { 600, 900, 1200, 1500 };
-        texts[] = { "600", "900", "1200", "1500" };
-        default = 900;
+        values[] = { 400, 600, 900, 1200, 1500 };
+        texts[] = { "400", "600", "900", "1200", "1500" };
+        default = 400;
+    };
+
+    class outpostWinRatio
+    {
+        title = "$STR_OEC_param_outpostWinRatio";
+        values[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+        texts[] = { "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" };
+        default = 80;
+    };
+
+    class assaultWinRatio
+    {
+        title = "$STR_OEC_param_assaultWinRatio";
+        values[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+        texts[] = { "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" };
+        default = 70;
     };
 
     class freezeTime

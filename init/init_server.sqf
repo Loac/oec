@@ -33,6 +33,10 @@ _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 // Init freeze time.
 [] execVM "init\init_freeze.sqf";
 
+// Init arbiter.
+[] execVM "init\init_arbiter.sqf";
+
+
 // Server complete initialization state.
 [
     ["outpostArea"],

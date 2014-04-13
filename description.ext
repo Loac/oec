@@ -2,7 +2,7 @@ enableDebugConsole = 2;
 allowFunctionsLog = 1;
 
 onLoadName = "Op: Emerald City";
-onLoadMission = "Good luck";
+onLoadMission = "$STR_OEC_onLoadMission";
 author = "Loac";
 
 #include "configs\cfgHeader.hpp"

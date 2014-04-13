@@ -29,6 +29,7 @@ class CfgFunctions
             class setEnvironment {};
             class getRandomValue {};
             class ratio {};
+            class endMission;
         };
     };
 };

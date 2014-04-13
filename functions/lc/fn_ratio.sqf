@@ -18,7 +18,8 @@ private [
     "_a",
     "_b",
     "_aUnits",
-    "_bUnits"
+    "_bUnits",
+    "_result"
 ];
 
 _a = _this select 0;
@@ -27,8 +28,15 @@ _b = _this select 1;
 _aUnits = count _a;
 _bUnits = count _b;
 
+_result = [0, 0];
+
 // Ratio by percent.
-[
-    100 / (_aUnits + _bUnits) * _aUnits,
-    100 / (_bUnits + _aUnits) * _bUnits
-];
+if (_aUnits + _bUnits > 0) then {
+    _result = [
+        100 / (_aUnits + _bUnits) * _aUnits,
+        100 / (_bUnits + _aUnits) * _bUnits
+    ];
+};
+
+// Return;
+_result;

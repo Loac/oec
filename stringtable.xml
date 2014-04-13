@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Operation Emerald City">
     <Package name="Main">
+        <Key ID="STR_OEC_onLoadMission">
+            <Original>Random defence and attack mission</Original>
+            <Russian>Случайная миссия "оборона и нападение"</Russian>
+        </Key>
         <Key ID="STR_OEC_please_stand_by">
             <Original>Please, stand by.</Original>
             <Russian>Пожалуйста, подождите.</Russian>
@@ -13,11 +17,35 @@
             <Original>Object: %1</Original>
             <Russian>Объект: %1</Russian>
         </Key>
+        <Key ID="STR_OEC_win">
+            <Original>You win</Original>
+            <Russian>Победа</Russian>
+        </Key>
+        <Key ID="STR_OEC_lose">
+            <Original>You lose</Original>
+            <Russian>Поражение</Russian>
+        </Key>
+        <Key ID="STR_OEC_outpostWinRatio">
+            <Original>Outpost repulsed attack</Original>
+            <Russian>Войска обороны отразили нападение</Russian>
+        </Key>
+        <Key ID="STR_OEC_assaultWinRatio">
+            <Original>Assault defeated of outpost forces</Original>
+            <Russian>Нападение уничтожило войска оброны</Russian>
+        </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_OEC_param_outpostDistance">
             <Original>Outpost distance</Original>
             <Russian>Расстояние до заставы</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_outpostWinRatio">
+            <Original>Outpost win ration</Original>
+            <Russian>Необходимое соотношение сил обороны для победы</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_assaultWinRatio">
+            <Original>Assault win ration</Original>
+            <Russian>Необходимое соотношение сил нападения для победы</Russian>
         </Key>
         <Key ID="STR_OEC_param_freezeTime">
             <Original>Freeze time</Original>

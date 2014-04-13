@@ -1,24 +1,48 @@
 class CfgDebriefing
 {
-    class WEST_blueHoldTarget
+    class WIN_outpostWinRatio
     {
-        title = "$STR_RQF_win";
-        subtitle = "$STR_RQF_blueHoldTarget";
-        description = "Yippee Ki Yay, motherfuckers.";
+        title = "$STR_OEC_win";
+        subtitle = "$STR_OEC_outpostWinRatio";
+        description = "";
         pictureBackground = "";
         picture = "";
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class EAST_blueHoldTarget
+    class LOSE_outpostWinRatio
     {
-        title = "$STR_RQF_lose";
-        subtitle = "$STR_RQF_blueHoldTarget";
-        description = "I can't belive this shit.";
+        title = "$STR_OEC_lose";
+        subtitle = "$STR_OEC_outpostWinRatio";
+        description = "";
         pictureBackground = "";
         picture = "";
         pictureColor[] = { 0, 0, 1, 1 };
     };
+
+    class WIN_assaultWinRatio
+    {
+        title = "$STR_OEC_win";
+        subtitle = "$STR_OEC_assaultWinRatio";
+        description = "";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = { 0, 0, 1, 1 };
+    };
+
+    class LOSE_assaultWinRatio
+    {
+        title = "$STR_OEC_lose";
+        subtitle = "$STR_OEC_assaultWinRatio";
+        description = "";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = { 0, 0, 1, 1 };
+    };
+
+
+
+
 
     class WEST_redHoldTarget
     {
