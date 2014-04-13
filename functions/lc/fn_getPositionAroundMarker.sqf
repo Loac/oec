@@ -93,7 +93,7 @@ for "_i" from 0 to _maxTry -1 do {
     };
 
     // Rotate according to area.
-    _vector = [_vector, -_mDir] call bis_fnc_rotateVector2D;
+    _vector = [_vector, -_mDir] call BIS_fnc_rotateVector2D;
 
     // Convert to world coordinates.
     _positionCandidate = [

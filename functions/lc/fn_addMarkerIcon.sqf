@@ -9,10 +9,10 @@
         0: Name (optional). If empty, it will be position.
         1: Position.
         2: Type (optional).
-        2: Text (optional).
-        3: Direction (optional).
-        4: Color (optinal).
-        5: Alpha (optinal).
+        3: Text (optional).
+        4: Direction (optional).
+        5: Color (optinal).
+        6: Alpha (optinal).
 
     Example:
         ["MARKER", position player, "mil_dot", "", 45, "ColorRed", 0.7] call lc_fnc_addMarkerIcon;

@@ -34,11 +34,8 @@
         aiEnable
 */
 
-// Devel.
-devel = false;
-
 // Enable devel options.
-if (devel) then {
+if (false) then {
     [] execVM "init\init_devel.sqf";
 };
 
@@ -52,8 +49,6 @@ EXCLUDE_MARKER_COLOR = "ColorRed";
 DISABLE_MARKER_COLOR = "ColorBlack";
 FREEZE_MARKER_COLOR = "Color1_FD_F";
 OBJECT_MARKER_COLOR = "ColorUNKNOWN";
-
-CLIENT_STATE_CONNECTED = 1; // Connected.
 
 // Flag to mission start.
 startMission = false;
@@ -119,17 +114,11 @@ if (not isDedicated) then {
 
     Параметр времени удержания
 
-    Параметры необходимого соотношения войск для победы для каждой из сторон.
-
     Установить условия победы
         Для обороны
-            С истечением заданного времени, на объекте все еще есть войска обороны.
-            Соотношение сил в пользу обороны.
+            С истечением заданного времени, на объекте все еще есть необходимое соотношение сил обороны.
         Для нападения
             Присутсвие войск обороны на объекте меньше необходимого соотношения более минуты.
-            Соотношение сил в пользу нападения.
-
-    Арбитр, который следит за условиями победы и порожения.
 
     Триггеры.
 

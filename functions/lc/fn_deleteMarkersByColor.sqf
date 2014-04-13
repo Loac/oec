@@ -12,7 +12,7 @@
         ["ColorOrange", "ColorRed"] call lc_fnc_deleteMarkersByColor;
 
     See:
-        https://community.bistudio.com/wiki/setMarkerColor
+        https://community.bistudio.com/wiki/deleteMarker
 */
 
 {

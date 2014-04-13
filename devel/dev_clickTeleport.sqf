@@ -3,7 +3,7 @@
         Initialisation teleport by click on map.
 
     Example:
-        _null = player addAction ["Teleport", "devel\dev_clickTeleport.sqf"];
+        player addAction ["Teleport", "devel\dev_clickTeleport.sqf"];
 */
 
 openMap [true, false];

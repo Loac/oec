@@ -2,12 +2,8 @@
     Description:
         Initialisation teleport by click on map.
 
-    Global variables:
-        outpost
-        assault
-
     Example:
-        _null = player addAction ["Teleport", "devel\dev_clickTeleport.sqf"];
+        player addAction ["Teleport", "devel\dev_clickTeleportAll.sqf"];
 */
 
 private [

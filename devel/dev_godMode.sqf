@@ -3,7 +3,7 @@
         Switch god mode.
 
     Example:
-        _null = player addAction ["God mode", "devel\dev_godMode.sqf"];
+        player addAction ["God mode", "devel\dev_godMode.sqf"];
 */
 
 develGodMode = not develGodMode;
