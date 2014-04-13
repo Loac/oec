@@ -54,26 +54,5 @@ _marker setMarkerDir _dir;
 _marker setMarkerColor _color;
 _marker setMarkerAlpha _alpha;
 
-        // case "shape": { _marker setMarkerShape _value };
-        // case "size": { _marker setMarkerSize _value };
-        // case "brush": { _marker setMarkerBrush _value };
-        // case "dir": { _marker setMarkerDir _value };
-        // case "color": { _marker setMarkerColor _value };
-        // case "text": { _marker setMarkerText _value };
-        // case "alpha": { _marker setMarkerAlpha _value };
-    // };
-
 // Return.
 _marker;
-
-// setMarkerType
-// setMarkerShape
-// setMarkerBrush
-
-// setMarkerDir
-// setMarkerColor
-
-// setMarkerAlpha
-// setMarkerSize
-// setMarkerText
-

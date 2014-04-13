@@ -24,10 +24,6 @@ waitUntil { not isNull Player and isPlayer Player };
     // Hide setting markers.
     [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_hideMarkersByColor;
 
-//     disableSerialization;
-//     (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "ASSAULT"];
-//     ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
-
     // Set markers for player and hide waypoints.
     [] execVM "init\init_client_markers.sqf";
 
