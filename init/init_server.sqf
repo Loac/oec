@@ -9,9 +9,6 @@
 // Load params.
 _handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
 
-// Init sides.
-_handle = [] execVM "init\init_units.sqf"; waitUntil { scriptDone _handle };
-
 // Outpost initialization procedures.
 _handle = [] execVM "init\init_outpost.sqf"; waitUntil { scriptDone _handle };
 
@@ -20,6 +17,9 @@ _handle = [] execVM "init\init_assault.sqf"; waitUntil { scriptDone _handle };
 
 // Wait to start mission.
 waitUntil { time > 0 };
+
+// Init sides.
+_handle = [] execVM "init\init_units.sqf"; waitUntil { scriptDone _handle };
 
 // Init environment.
 _handle = [] execVM "init\init_environment.sqf"; waitUntil { scriptDone _handle };
