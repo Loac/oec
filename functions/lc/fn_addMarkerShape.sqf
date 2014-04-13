@@ -14,6 +14,7 @@
         5: Direction (optional).
         6: Color (optinal).
         7: Alpha (optinal).
+        8: Text (optional).
 
     Example:
         ["MARKER", position player, nil, nil, nil, 45, "ColorRed", 0.7] call lc_fnc_addMarkerShape;
@@ -27,7 +28,7 @@
 
 private [
     "_name", "_position",
-    "_shape", "_size", "_dir", "_color", "_type", "_alpha",
+    "_shape", "_size", "_dir", "_color", "_type", "_alpha", "_text",
     "_marker"
 ];
 
@@ -40,6 +41,7 @@ _brush =  [_this, 4, "Solid"] call BIS_fnc_param;
 _dir = [_this, 5, 0] call BIS_fnc_param;
 _color = [_this, 6, "ColorBlack"] call BIS_fnc_param;
 _alpha = [_this, 7, 1] call BIS_fnc_param;
+_text = [_this, 8, ""] call BIS_fnc_param;
 
 // If empty name, generate it.
 if (_name == "") then {
@@ -56,6 +58,7 @@ _marker setMarkerBrush _brush;
 _marker setMarkerDir _dir;
 _marker setMarkerColor _color;
 _marker setMarkerAlpha _alpha;
+_marker setMarkerText _text;
 
 // Return.
 _marker;
