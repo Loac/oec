@@ -6,8 +6,8 @@
     Teleport untis.
 
   Parameters:
-    position - array.
-    units - array.
+    0: array - position.
+    1: array - units.
 
   Example:
     [[player], getMarkerPos "TARGET"] call lc_fnc_teleport;

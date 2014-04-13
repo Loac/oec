@@ -8,9 +8,6 @@
   Parameters:
     ---
 
-  Global variables:
-    ---
-
   Example:
     ---
 

@@ -25,7 +25,6 @@ class CfgFunctions
             class getPositionAroundMarker {};
             class randomPosTrigger {};
             class timeToTimer {};
-            class request {};
             class teleport {};
             class setEnvironment {};
             class getRandomValue {};
