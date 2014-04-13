@@ -41,15 +41,15 @@ _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 outpostPosition = [[_outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
 
 // Remember selected outpost marker for locate assault. See: init_assault.sqf.
-outpostArea = _outpostArea;
+// outpostArea = _outpostArea;
 
 // Add outpost marker for all users.
-[
-    "",
-    markerPos outpostArea,
-    markerShape outpostArea,
-    markerSize outpostArea, "SolidBorder",
-    markerDir outpostArea,
+outpostArea = [
+    "OBJECT",
+    markerPos _outpostArea,
+    markerShape _outpostArea,
+    markerSize _outpostArea, "SolidBorder",
+    markerDir _outpostArea,
     OBJECT_MARKER_COLOR, 0.5
 ] call lc_fnc_addMarkerShape;
 
