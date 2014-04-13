@@ -55,8 +55,3 @@ waitUntil { startMission };
 
     // Remove setting markers.
     [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
-
-    // Enable devel options.
-    if (devel) then {
-        [] execVM "init\init_client_devel.sqf";
-    };

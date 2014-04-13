@@ -11,6 +11,10 @@
 
 develGodMode = false;
 
+// Add debug console.
+// dblog = compile preprocessFile "devel\dev_dblog.sqf";
+// ["", "clear"] call dblog;
+
 // Teleport.
 player addAction ["Teleport", "devel\dev_clickTeleport.sqf"];
 

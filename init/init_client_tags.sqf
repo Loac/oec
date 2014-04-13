@@ -20,7 +20,7 @@ while {alive player} do {
         [
             format["<t size='0.7' color='#ADFF2F' shadow='2'>%1</t>", name _target],
             0, 0.7,
-            0.3, 0, 0,
+            0.5, 0, 0,
             _layer
         ] spawn bis_fnc_dynamicText;
     }
@@ -28,5 +28,5 @@ while {alive player} do {
         _layer cutFadeOut 0;
     };
 
-    sleep 0.3;
+    sleep 0.5;
 };

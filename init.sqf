@@ -23,6 +23,8 @@
 
     Params variable:
         outpostDistance
+        outpostWinRatio
+        assaultWinRatio
         freezeTime
         envSeason
         envTime
@@ -33,12 +35,11 @@
 */
 
 // Devel.
-devel = true;
+devel = false;
 
-// Debug.
+// Enable devel options.
 if (devel) then {
-    dblog = compile preprocessFile "devel\dev_dblog.sqf";
-    ["", "clear"] call dblog;
+    [] execVM "init\init_devel.sqf";
 };
 
 /*
@@ -114,6 +115,8 @@ if (not isDedicated) then {
 
 
 /*
+    Перемещение гражданских
+
     Параметр времени удержания
 
     Параметры необходимого соотношения войск для победы для каждой из сторон.
