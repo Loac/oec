@@ -29,6 +29,7 @@ class CfgFunctions
             class teleport {};
             class setEnvironment {};
             class getRandomValue {};
+            class ratio {};
         };
     };
 };
