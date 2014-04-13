@@ -27,8 +27,8 @@ _handle = [] execVM "init\init_environment.sqf"; waitUntil { scriptDone _handle 
 // Teleport units.
 _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 
-// Disable AI.
-[false] call lc_fnc_enableAI;
+// AI init.
+[] execVM "init\init_ai.sqf";
 
 // Init freeze time.
 [] execVM "init\init_freeze.sqf";

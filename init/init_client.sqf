@@ -24,13 +24,11 @@ waitUntil { not isNull Player and isPlayer Player };
     // Hide setting markers.
     [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_hideMarkersByColor;
 
-    // Hide player's waypoints
-    // { _x setWaypointVisible false } forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
 //     disableSerialization;
 //     (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "ASSAULT"];
 //     ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
 
-    // Set markers for player by side.
+    // Set markers for player and hide waypoints.
     [] execVM "init\init_client_markers.sqf";
 
 // Wait to start mission.
@@ -44,9 +42,6 @@ waitUntil { startMission };
 
     // Show intro.
     _handle = [] execVM "init\init_client_intro.sqf"; waitUntil { scriptDone _handle };
-
-    // Blind player on prepare mission.
-    // ["off", localize "STR_OEC_please_stand_by"] call lc_fnc_fade;
 
     // Unparalyze player.
     player enableSimulation true;
@@ -64,9 +59,6 @@ waitUntil { startMission };
 
     // Remove setting markers.
     [OUTPOST_MARKER_COLOR, EXCLUDE_MARKER_COLOR, DISABLE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
-
-    // Init complete, now player can see and move.
-    // ["in"] call lc_fnc_fade;
 
     // Enable devel options.
     if (devel) then {
