@@ -6,13 +6,13 @@
         Convert time to string fomat 00:00.
 
     See:
-    	BIS_fnc_timeToString
+        BIS_fnc_timeToString
 */
 
 private [
-	"_time",
-	"_min",
-	"_sec"
+    "_time",
+    "_min",
+    "_sec"
 ];
 
 _time = _this select 0;

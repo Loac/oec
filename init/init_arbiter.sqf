@@ -1,13 +1,13 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Monitor conditions of mission.
+    Description:
+        Monitor conditions of mission.
 
-  Global variables:
-    outpostWinRatio
-    assaultWinRatio
+    Global variables:
+        outpostWinRatio
+        assaultWinRatio
 */
 
 private [

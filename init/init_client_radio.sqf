@@ -41,4 +41,3 @@ if (isFormationLeader player) then {
     _trigger setTriggerText "Ready";
     _trigger setTriggerStatements["this", "[] call trgActivation", ""];
 };
-

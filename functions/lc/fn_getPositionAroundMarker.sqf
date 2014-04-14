@@ -1,22 +1,19 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Get random position around marker.
+    Description:
+        Get random position around marker.
 
-  Parameters:
-    0: string - marker.
-    1: integer - distance.
-    2: array - markers with excludes areas.
-    3: boolean - safe position.
-    4: integer (optional) - max try.
+    Parameters:
+        0: string - marker.
+        1: integer - distance.
+        2: array - markers with excludes areas.
+        3: boolean - safe position.
+        4: integer (optional) - max try.
 
-  Example:
-    [["Outpost 1"], 50, ["Exclude 1", "Exclude 2"]] call lc_fnc_getPositionAroundMarker;
-
-  See:
-    ---
+    Example:
+        [["Outpost 1"], 50, ["Exclude 1", "Exclude 2"]] call lc_fnc_getPositionAroundMarker;
 */
 
 private [

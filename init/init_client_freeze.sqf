@@ -47,7 +47,7 @@ waitUntil {
         sleep 1;
 
         // Get direction to center of start position.
-       _freezeDir = ([_playerPosition, _freezePosition] call bis_fnc_dirTo);
+       _freezeDir = ([_playerPosition, _freezePosition] call BIS_fnc_dirTo);
 
         // Move player back.
         player setPos [

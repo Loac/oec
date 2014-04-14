@@ -1,22 +1,22 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Init units by side.
+    Description:
+        Init units by side.
 
-  Parameters:
-    ---
+    Parameters:
+        ---
 
-  Global variables:
-    aiEnable
-    outpost
-    assault
-    outpostUnits
-    assaultUnits
+    Global variables:
+        aiEnable
+        outpost
+        assault
+        outpostUnits
+        assaultUnits
 
-  Example:
-    _handle = [] execVM "init\init_units.sqf";
+    Example:
+        [] execVM "init\init_units.sqf";
 */
 
 // Function: update unit arrays.

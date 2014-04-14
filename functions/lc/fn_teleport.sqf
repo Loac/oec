@@ -1,19 +1,16 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Teleport untis.
+    Description:
+        Teleport untis.
 
-  Parameters:
-    0: array - position.
-    1: array - units.
+    Parameters:
+        0: array - position.
+        1: array - units.
 
-  Example:
-    [[player], getMarkerPos "TARGET"] call lc_fnc_teleport;
-
-  See:
-    ---
+    Example:
+        [[player], getMarkerPos "TARGET"] call lc_fnc_teleport;
 */
 
 // TODO: Add other parameters.

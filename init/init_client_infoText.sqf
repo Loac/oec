@@ -5,7 +5,7 @@
 
 _world = toUpper(worldName);
 
-_nearestCity = nearestLocations [getPos player, ["NameCityCapital", "NameCity", "NameVillage", "NameLocal"],1000];
+_nearestCity = nearestLocations [getPos player, ["NameCityCapital", "NameCity", "NameVillage", "NameLocal"], 1000];
 
 _town = localize "STR_LOCATION_WILDERNESS";
 

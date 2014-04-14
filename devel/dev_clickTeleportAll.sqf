@@ -15,7 +15,7 @@ openMap [true, false];
 onMapSingleClick {
     {
         if (playerSide == side _x) then {
-          _units = _units + [_x];
+            _units = _units + [_x];
         };
 
         [_units, _pos] call lc_fnc_teleport

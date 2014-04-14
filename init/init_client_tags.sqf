@@ -3,7 +3,7 @@
         Show player tags.
 
     Example:
-        _handle = [] execVM "init\init_client_tags.sqf";
+        [] execVM "init\init_client_tags.sqf";
 */
 
 private [
@@ -22,7 +22,7 @@ while {alive player} do {
             0, 0.7,
             0.5, 0, 0,
             _layer
-        ] spawn bis_fnc_dynamicText;
+        ] spawn BIS_fnc_dynamicText;
     }
     else {
         _layer cutFadeOut 0;

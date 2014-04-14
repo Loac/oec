@@ -1,31 +1,31 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Find place for outpost.
-    Teleport units.
+    Description:
+        Find place for outpost.
+        Teleport units.
 
-  Global variables:
-    outpostPosition
-    outpostUnits
-    outpostArea
-    OUTPOST_MARKER_COLOR
+    Global variables:
+        outpostPosition
+        outpostUnits
+        outpostArea
+        OUTPOST_MARKER_COLOR
 
-  Example:
-    _handle = [] execVM "init\init_outpost.sqf";
+    Example:
+        [] execVM "init\init_outpost.sqf";
 
-  See:
-    https://community.bistudio.com/wiki/findEmptyPosition
-    https://community.bistudio.com/wiki/selectBestPlaces
-    https://community.bistudio.com/wiki/Ambient_Parameters
+    See:
+        https://community.bistudio.com/wiki/findEmptyPosition
+        https://community.bistudio.com/wiki/selectBestPlaces
+        https://community.bistudio.com/wiki/Ambient_Parameters
 */
 
 private [
-  "_outpostMarkers",
-  "_outpostArea",
-  "_outpostPlaces",
-  "_excludeMarkers"
+    "_outpostMarkers",
+    "_outpostArea",
+    "_outpostPlaces",
+    "_excludeMarkers"
 ];
 
 // Find outpost markers.

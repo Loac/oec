@@ -1,12 +1,12 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Add devel actions.
+    Description:
+        Add devel actions.
 
-  Global variables:
-    devel
+    Global variables:
+        devel
 */
 
 develGodMode = false;

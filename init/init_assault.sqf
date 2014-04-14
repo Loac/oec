@@ -1,19 +1,19 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Find place for assault.
-    Teleport units.
+    Description:
+        Find place for assault.
+        Teleport units.
 
-  Global variables:
-    assaultPosition
-    assaultUnits
-    outpostArea
-    outpostDistance
+    Global variables:
+        assaultPosition
+        assaultUnits
+        outpostArea
+        outpostDistance
 
-  Example:
-    _handle = [] execVM "init\init_assault.sqf";
+    Example:
+        [] execVM "init\init_assault.sqf";
 
   See:
     ---

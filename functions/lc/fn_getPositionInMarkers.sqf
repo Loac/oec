@@ -1,21 +1,19 @@
 /*
-  Author:
-    Dmitry Loac
+    Author:
+        Dmitry Loac
 
-  Description:
-    Get random position in some markers with excludes.
-    For work need fixed version BIS function lc_fnc_randomPosTrigger.
+    Description:
+        Get random position in some markers with excludes.
+        For work need fixed version BIS function lc_fnc_randomPosTrigger.
 
-  Parameters:
-    0: array - markers for finding position.
-    1: array - markers with excludes areas.
-    2: integer (optional) - max try for finding position.
+    Parameters:
+        0: array - markers for finding position.
+        1: array - markers with excludes areas.
+        2: integer (optional) - max try for finding position.
 
-  Example:
-    _position = [["Outpost 1"], ["Exclude 1", "Exclude 2"]] call lc_fnc_getPositionInMarkers;
+    Example:
+        _position = [["Outpost 1"], ["Exclude 1", "Exclude 2"]] call lc_fnc_getPositionInMarkers;
 
-  See:
-    ---
 */
 
 private [
