@@ -33,10 +33,11 @@ waitUntil {
 // Delete freeze zone markers.
 [FREEZE_MARKER_COLOR] call lc_fnc_deleteMarkersByColor;
 
-// Enable AI.
-if (aiEnable) then {
-    [true] call lc_fnc_enableAI;
-};
+// Enable or stay disable AI.
+[aiEnable] call lc_fnc_enableAI;
 
 // Run outpost timer.
-[] execVM "init\init_timer.sqf";
+// [] execVM "init\init_timer.sqf";
+
+// Init arbiter.
+[] execVM "init\init_arbiter.sqf";

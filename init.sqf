@@ -12,7 +12,6 @@
         outpost
         assault
         outpostArea
-        outpostTimerRemaining
         outpostUnits
         assaultUnits
         outpostPosition
@@ -54,9 +53,6 @@ OBJECT_MARKER_COLOR = "ColorUNKNOWN";
 
 // Flag to mission start.
 startMission = false;
-
-// Outpost timer remaining.
-outpostTimerRemaining = 0;
 
 // Role of sides.
 // TODO: It must be selectable.
@@ -117,11 +113,7 @@ if (not isDedicated) then {
 /*
     Перемещение гражданских
 
-    Параметр времени удержания
-
     Установить условия победы
-        Для обороны
-            С истечением заданного времени, на объекте все еще есть необходимое соотношение сил обороны.
         Для нападения
             Присутсвие войск обороны на объекте меньше необходимого соотношения более минуты.
 

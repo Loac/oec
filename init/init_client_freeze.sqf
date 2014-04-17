@@ -72,7 +72,5 @@ waitUntil {
 // Disable god mod.
 player allowDamage true;
 
-// Enable AI.
-if (aiEnable) then {
-    [true] call lc_fnc_enableAI;
-};
+// Enable or stay disable AI.
+[aiEnable] call lc_fnc_enableAI;
