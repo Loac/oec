@@ -8,6 +8,14 @@ class Params
         default = 400;
     };
 
+    class outpostTimer
+    {
+        title = "$STR_OEC_param_outpostTimer";
+        values[] = { 600, 900, 1200, 1500, 1800 };
+        texts[] = { "10:00", "15:00", "20:00", "25:00", "30:00" };
+        default = 900;
+    };
+
     class outpostWinRatio
     {
         title = "$STR_OEC_param_outpostWinRatio";

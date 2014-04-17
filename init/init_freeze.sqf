@@ -37,3 +37,6 @@ waitUntil {
 if (aiEnable) then {
     [true] call lc_fnc_enableAI;
 };
+
+// Run outpost timer.
+[] execVM "init\init_timer.sqf";

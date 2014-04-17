@@ -36,7 +36,6 @@ _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 // Init arbiter.
 [] execVM "init\init_arbiter.sqf";
 
-
 // Server complete initialization state.
 [
     ["outpostArea"],
@@ -46,3 +45,6 @@ _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
     ["aiEnable"],
     ["startMission", true]
 ] call lc_fnc_broadcast;
+
+// Post freeze time initialization.
+// waitUntil { freezeTime < 0 };

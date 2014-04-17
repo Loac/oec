@@ -33,11 +33,19 @@
             <Original>Assault defeated of outpost forces</Original>
             <Russian>Нападение уничтожило войска оброны</Russian>
         </Key>
+        <Key ID="STR_OEC_outpostWinTime">
+            <Original>Outpost hold positions</Original>
+            <Russian>Оборона удержала позиции</Russian>
+        </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_OEC_param_outpostDistance">
             <Original>Outpost distance</Original>
             <Russian>Расстояние до заставы</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_outpostTimer">
+            <Original>Outpost timer</Original>
+            <Russian>Необходимое время для удержания заставы</Russian>
         </Key>
         <Key ID="STR_OEC_param_outpostWinRatio">
             <Original>Outpost win ration</Original>

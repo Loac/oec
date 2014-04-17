@@ -12,6 +12,7 @@
         outpost
         assault
         outpostArea
+        outpostTimerRemaining
         outpostUnits
         assaultUnits
         outpostPosition
@@ -23,6 +24,7 @@
 
     Params variable:
         outpostDistance
+        outpostTimer
         outpostWinRatio
         assaultWinRatio
         freezeTime

@@ -6,6 +6,8 @@
         Monitor conditions of mission.
 
     Global variables:
+        outpost
+        assault
         outpostWinRatio
         assaultWinRatio
 */
@@ -39,6 +41,12 @@ waitUntil {
     if (_assaultRatio > assaultWinRatio) then {
         _scenario = "assaultWinRatio";
         _winner = assault;
+    };
+
+    // Outpost win by time.
+    if (outpostTimerRemaining < 0) then {
+        _scenario = "outpostWinTime";
+        _winner = outpost;
     };
 
     // Wait while _winner is not defined.
