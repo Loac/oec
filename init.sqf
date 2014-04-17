@@ -55,6 +55,9 @@ OBJECT_MARKER_COLOR = "ColorUNKNOWN";
 // Flag to mission start.
 startMission = false;
 
+// Outpost timer remaining.
+outpostTimerRemaining = 0;
+
 // Role of sides.
 // TODO: It must be selectable.
 outpost = west;

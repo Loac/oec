@@ -18,8 +18,10 @@ private [
 // Save time of start mission without freeze time.
 _startTime = time;
 
-while {true} do {
+waitUntil {
     sleep 1;
 
     outpostTimerRemaining = outpostTimer + _startTime - time;
+
+    outpostTimerRemaining < 0;
 };
