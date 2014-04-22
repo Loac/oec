@@ -225,7 +225,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			position[]={2425.7849,2.9072504,1138.8149};
@@ -282,6 +282,16 @@ class Mission
 			a=70;
 			b=42;
 			angle=41.909599;
+		};
+		class Item5
+		{
+			position[]={7079.9717,7.1656003,5933.2705};
+			name="exclude 1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			a=200;
+			b=200;
 		};
 	};
 };
