@@ -8,27 +8,35 @@ class Params
         default = 400;
     };
 
-    class outpostTimer
+    class outpostWinTime
     {
-        title = "$STR_OEC_param_outpostTimer";
+        title = "$STR_OEC_param_outpostWinTime";
         values[] = { 600, 900, 1200, 1500, 1800 };
         texts[] = { "10:00", "15:00", "20:00", "25:00", "30:00" };
         default = 900;
     };
 
+    class assaultWinHoldRatio
+    {
+        title = "$STR_OEC_param_assaultWinHoldRatio";
+        values[] = { 50, 60, 70, 80, 90, 100 };
+        texts[] = { "50%", "60%", "70%", "80%", "90%", "100%" };
+        default = 90;
+    };
+
     class outpostWinRatio
     {
         title = "$STR_OEC_param_outpostWinRatio";
-        values[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-        texts[] = { "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" };
+        values[] = { 50, 60, 70, 80, 90, 100 };
+        texts[] = { "50%", "60%", "70%", "80%", "90%", "100%" };
         default = 80;
     };
 
     class assaultWinRatio
     {
         title = "$STR_OEC_param_assaultWinRatio";
-        values[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-        texts[] = { "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" };
+        values[] = { 50, 60, 70, 80, 90, 100 };
+        texts[] = { "50%", "60%", "70%", "80%", "90%", "100%" };
         default = 70;
     };
 

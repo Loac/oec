@@ -37,6 +37,10 @@
             <Original>Outpost hold positions</Original>
             <Russian>Оборона удержала позиции</Russian>
         </Key>
+        <Key ID="STR_OEC_assaultWinHoldRatio">
+            <Original>Assault hold outpost</Original>
+            <Russian>Нападение захватило объект</Russian>
+        </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_OEC_param_outpostDistance">
@@ -46,6 +50,10 @@
         <Key ID="STR_OEC_param_outpostTimer">
             <Original>Outpost timer</Original>
             <Russian>Необходимое время для удержания заставы</Russian>
+        </Key>
+        <Key ID="STR_OEC_param_assaultWinHoldRatio">
+            <Original>Assault win hold ratio</Original>
+            <Russian>Необходимое соотношение сил захвата</Russian>
         </Key>
         <Key ID="STR_OEC_param_outpostWinRatio">
             <Original>Outpost win ration</Original>

@@ -10,6 +10,7 @@
         assault
         outpostWinRatio
         assaultWinRatio
+        assaultHoldRatio
 */
 
 private [
@@ -27,42 +28,33 @@ _scenario = "";
 _outpostTimerStart = time;
 _outpostTimerRemaining = 0;
 
-// Outpost capture ratio.
-trgOutpostCaptureRatio = {
-    _east = east countSide thisList;
-    _west = west countSide thisList;
+// Outpost capture ratio. Function and Trigger.
+assaultHoldRatioUpdate = {
+    private ["_outpostUnits", "_assaultUnits"];
 
-    hint format["%1", 100 / (_east + _west) * _east];
+    _outpostUnits = outpost countSide thisList;
+    _assaultUnits = assault countSide thisList;
+
+    assaultHoldRatio = [_assaultUnits, _outpostUnits] call lc_fnc_ratio;
 };
 
 _trigger = [objNull, "OBJECT"] call BIS_fnc_triggerToMarker;
 _trigger setTriggerActivation["ANY", "PRESENT", true];
-_trigger setTriggerStatements["[] call trgOutpostCaptureRatio; false;", "", ""];
+_trigger setTriggerStatements["[] call assaultHoldRatioUpdate; false;", "", ""];
 
-// Run outpost timer.
-// [] spawn {
-//     // Save time of start mission without freeze time.
-//     _startTime = time;
-
-//     waitUntil {
-//         sleep 1;
-
-//         outpostTimerRemaining = outpostTimer + _startTime - time;
-
-//         outpostTimerRemaining < 0;
-//     };
-// };
-
+// Start arbiter.
 waitUntil {
     sleep 1;
 
     // Update timer.
-    _outpostTimerRemaining = outpostTimer + _outpostTimerStart - time;
+    _outpostTimerRemaining = outpostWinTime + _outpostTimerStart - time;
 
     // Update ratio.
-    _ratio = [outpostUnits, assaultUnits] call lc_fnc_ratio;
-    _outpostRatio = _ratio select 0;
-    _assaultRatio = _ratio select 1;
+    _outpostUnits = count outpostUnits;
+    _assaultUnits = count assaultUnits;
+
+    _outpostRatio = [_outpostUnits, _assaultUnits] call lc_fnc_ratio;
+    _assaultRatio = [_assaultUnits, _outpostUnits] call lc_fnc_ratio;
 
     // Outpost win by ratio.
     if (_outpostRatio > outpostWinRatio) then {
@@ -82,14 +74,19 @@ waitUntil {
         _winner = outpost;
     };
 
+    // Assault win by hold ratio.
+    if (assaultHoldRatio > assaultWinHoldRatio) then {
+        _scenario = "assaultWinHoldRatio";
+        _winner = assault;
+    };
+
+    hint format["assaultHoldRatio: %1\n _outpostRatio: %2\n _assaultRatio: %3\n _outpostTimerRemaining: %4\n",
+        assaultHoldRatio, _outpostRatio, _assaultRatio, _outpostTimerRemaining];
+
+
     // Wait while _winner is not defined.
     not (_winner == sideLogic);
 };
 
 // End of misson.
 [[_winner, _scenario], "lc_fnc_endMission"] spawn BIS_fnc_MP;
-
-// Find, activate and delete trigger.
-// trg = (allMissionObjects "EmptyDetector") select 0;
-// trg setTriggerStatements ["true", "hint 'trigger on'", "hint 'trigger off'"];
-// deleteVehicle trg;

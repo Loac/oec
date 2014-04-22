@@ -20,10 +20,12 @@
         assaultReady
         freezeSize
         environment
+        assaultHoldRatio
 
     Params variable:
         outpostDistance
         outpostTimer
+        assaultWinHoldRatio
         outpostWinRatio
         assaultWinRatio
         freezeTime
@@ -36,7 +38,7 @@
 */
 
 // Enable devel options.
-if (false) then {
+if (true) then {
     [] execVM "init\init_devel.sqf";
 };
 
@@ -77,12 +79,15 @@ freezeSize = 50;
 // Selected outpost marker.
 outpostArea = "";
 
-// Outpost and start position for assault.
+// Outpost and assault start position.
 outpostPosition = [];
 assaultPosition = [];
 
 // Environment settings.
 environment = [];
+
+// Ratio assault units in object area.
+assaultHoldRatio = 0;
 
 /*
     Initializations.
@@ -126,4 +131,10 @@ if (not isDedicated) then {
     Спавн транспорта.
 
     Расширенное описание объектов для брифинга.
+
+
+    // Find, activate and delete trigger.
+    // trg = (allMissionObjects "EmptyDetector") select 0;
+    // trg setTriggerStatements ["true", "hint 'trigger on'", "hint 'trigger off'"];
+    // deleteVehicle trg;
 */

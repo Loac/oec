@@ -59,4 +59,24 @@ class CfgDebriefing
         picture = "";
         pictureColor[] = { 0, 0, 1, 1 };
     };
+
+    class WIN_assaultWinHoldRatio
+    {
+        title = "$STR_OEC_win";
+        subtitle = "$STR_OEC_assaultWinHoldRatio";
+        description = "";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = { 0, 0, 1, 1 };
+    };
+
+    class LOSE_assaultWinHoldRatio
+    {
+        title = "$STR_OEC_lose";
+        subtitle = "$STR_OEC_assaultWinHoldRatio";
+        description = "";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = { 0, 0, 1, 1 };
+    };
 };
