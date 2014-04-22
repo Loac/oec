@@ -46,7 +46,7 @@ if (aiEnable) then {
         _waypoint setWaypointType "SENTRY";
         _waypoint setWaypointVisible false;
         _waypoint showWaypoint "NEVER";
-        _x setBehaviour "COMBAT";
+        _x setBehaviour "AWARE";
         _x setSpeedMode "FULL";
 
         // Check player group leader.
