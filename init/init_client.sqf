@@ -42,6 +42,7 @@ waitUntil { startMission };
     // Unparalyze player.
     player enableSimulation true;
 
+    // Show info about place.
     [] execVM "init\init_client_infoText.sqf";
 
     // Enable tags.

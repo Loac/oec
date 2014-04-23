@@ -36,8 +36,5 @@ waitUntil {
 // Enable or stay disable AI.
 [aiEnable] call lc_fnc_enableAI;
 
-// Run outpost timer.
-// [] execVM "init\init_timer.sqf";
-
 // Init arbiter.
 [] execVM "init\init_arbiter.sqf";

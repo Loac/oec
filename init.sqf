@@ -24,7 +24,7 @@
 
     Params variable:
         outpostDistance
-        outpostTimer
+        outpostWinTime
         assaultWinHoldRatio
         outpostWinRatio
         assaultWinRatio
@@ -35,6 +35,11 @@
         envFog
         envRain
         aiEnable
+
+    Inline functions:
+        updateUnits - init\init_units.sqf
+        assaultHoldRatioUpdate - init\init_arbiter.sqf
+        trgActivation - init\init_client_radio.sqf
 */
 
 // Enable devel options.
@@ -105,7 +110,6 @@ if (not isDedicated) then {
         Client side procedures.
     */
     [] execVM "init\init_client.sqf";
-
 };
 
 // x = [] spawn
@@ -114,15 +118,13 @@ if (not isDedicated) then {
 //   ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
 // };
 
+// Find, activate and delete trigger.
+// trg = (allMissionObjects "EmptyDetector") select 0;
+// trg setTriggerStatements ["true", "hint 'trigger on'", "hint 'trigger off'"];
+// deleteVehicle trg;
 
 /*
-    Перемещение гражданских
-
-    Установить условия победы
-        Для нападения
-            Присутсвие войск обороны на объекте меньше необходимого соотношения более минуты.
-
-    Триггеры.
+    localize init_client_radio.sqf
 
     Брифинг.
 
@@ -130,11 +132,9 @@ if (not isDedicated) then {
 
     Спавн транспорта.
 
+    Перемещение гражданских.
+
+    Триггеры на объектах.
+
     Расширенное описание объектов для брифинга.
-
-
-    // Find, activate and delete trigger.
-    // trg = (allMissionObjects "EmptyDetector") select 0;
-    // trg setTriggerStatements ["true", "hint 'trigger on'", "hint 'trigger off'"];
-    // deleteVehicle trg;
 */

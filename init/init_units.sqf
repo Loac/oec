@@ -36,10 +36,10 @@ updateUnits = {
     } forEach allUnits;
 };
 
-// First count.
-[] call updateUnits;
-
 {
     // Update unit arrays after each murder.
     _x addMPEventHandler ["MPKilled", { [] spawn updateUnits } ];
 } forEach allUnits;
+
+// First count.
+[] call updateUnits;

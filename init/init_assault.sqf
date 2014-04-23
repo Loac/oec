@@ -4,7 +4,6 @@
 
     Description:
         Find place for assault.
-        Teleport units.
 
     Global variables:
         assaultPosition

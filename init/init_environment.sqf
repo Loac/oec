@@ -55,7 +55,7 @@ _minute = [1, 59] call BIS_fnc_randomInt;
     _envValue = missionNamespace getVariable _envName;
 
     // If value less 0, then it random environment.
-    // Env params "envSeason" and "envTime" will be in environment array, but "rqf_fnc_setEnvironment" just ignore it.
+    // Env params "envSeason" and "envTime" will be in environment array, but "lc_fnc_setEnvironment" just ignore it.
     if (_envValue < 0) then {
         // Get random value.
         _envValue = [_envName] call lc_fnc_getRandomValue;

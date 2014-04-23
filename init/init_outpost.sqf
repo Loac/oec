@@ -4,7 +4,6 @@
 
     Description:
         Find place for outpost.
-        Teleport units.
 
     Global variables:
         outpostPosition
@@ -39,9 +38,6 @@ _excludeMarkers = [EXCLUDE_MARKER_COLOR] call lc_fnc_getMarkersByColor;
 
 // Try to find some point for make teleport places.
 outpostPosition = [[_outpostArea], _excludeMarkers] call lc_fnc_getPositionInMarkers;
-
-// Remember selected outpost marker for locate assault. See: init_assault.sqf.
-// outpostArea = _outpostArea;
 
 // Add outpost marker for all users.
 outpostArea = [
